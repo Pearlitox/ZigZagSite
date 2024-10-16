@@ -1,0 +1,801 @@
+@import 'utils/variables';
+@import 'components/type';
+
+.index {
+    background-color: $bg-color;
+    margin: 0;
+    scroll-snap-type: y mandatory;
+    overflow-x: hidden;
+
+    h1 {
+        font-size: $h1-mobile;
+        font-family: "Pixelify Sans", sans-serif;
+        text-align: center;
+        color: $textBlack-color;
+    }
+    h2 {
+        font-family: "Pixelify Sans", sans-serif;
+    }
+    p {
+        line-height: 1.6;
+        color: $textBlack-color;
+    }
+    h3 {
+        margin: 0%;
+        margin-bottom: $margin-1;
+    }
+}
+
+body::-webkit-scrollbar {
+    width: 12px; /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+    background: $textBlack-color; /* couleur du fond */
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: $bg-color; /* couleur du scroll */
+    border-radius: 20px;
+    border: 3px solid $textBlack-color;
+}
+
+.header {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    // background: linear-gradient(0deg, $fourth-color 20%, rgba(118, 84, 15, 0) 90%), repeating-linear-gradient(transparent, transparent 50px, $fourth-color 52px), repeating-linear-gradient(90deg, transparent, transparent 50px, $fourth-color 52px);
+    background-attachment: fixed;
+    background-image: url('../assets/images/bg-header.png');
+    position: relative;
+
+    &__txt {
+        padding: 15px;
+        z-index: 10;
+
+        .header__title {
+            font-size: $h2-mobile;
+            font-family: "Pixelify Sans", sans-serif;
+            color: $textWhite-color;
+            text-shadow: 0px 5px 0px #3351E3; 
+            max-width: 40ch;
+        }
+    }
+    h1 {
+        text-shadow: 0px 7px 0px #3351E3; 
+        color: $textWhite-color;
+    }
+    &__img {
+        position: absolute;
+
+        &--top {
+            right: -110px;
+            top: 10px;
+            width: 250px;
+            animation: move-top 15s linear infinite;
+        }
+        &--right {
+            left: -250px;
+            bottom: -38px;
+            width: 450px;
+            opacity: 0.8;
+            animation: move-right 15s linear infinite;
+        }
+        &--topleft {
+            display: none;
+        }
+        &--bottom {
+            display: none;
+        }
+    }
+
+    @keyframes move-top {
+        0% {
+            transform: translateX(100%); /* Image commence à droite de l'écran */
+        }
+        100% {
+            transform: translateX(-100%); /* Image sort de l'écran à gauche */
+        }
+    }
+    
+    /* Animation pour img--right */
+    @keyframes move-right {
+        0% {
+            transform: translateX(100%); 
+        }
+        100% {
+            transform: translateX(-100%); /* Image sort de l'écran à gauche */
+        }
+    }
+}
+
+.section {
+    scroll-snap-align: start;
+    height: 100vh;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: $margin-3;
+    padding-top: $margin-2;
+}
+
+.titleAnim {
+    color: $textBlack-color;
+    text-align: center;
+    
+    span {
+      animation: glow-in .5s both;
+    }
+}
+
+.intro {
+    color: $textBlack-color;
+    font-family: "Radio Canada Big", sans-serif;
+    height: 100vh;
+    position: relative;
+    //background-color: black;
+
+    &__img {
+        margin-top: 30px;
+        position: absolute;
+        right: 0;
+        // background-image: url('../assets/images/brainCrop.png');
+        width: 300px;
+        justify-content: end;
+        background-size: cover;
+    }
+}
+
+@keyframes glow-in {
+    from { opacity: 0; }
+    65% {
+        opacity: 1;
+        text-shadow: 0 0 20px $fourth-color;
+    }
+    75% {
+        opacity: 1;
+    }
+    to { opacity: 0.7; }
+}
+  
+.pourquoi {
+    position: relative;
+    height: 100vh;
+    &__text {
+        font-size: $p-mobile;
+    }
+    span {
+        opacity: 0.3; /* Tous les mots sont à 0.3 initialement */
+        transition: opacity 0.3s ease; /* Pour un léger effet de transition */
+        color: $textBlack-color;
+    }
+    &__img {
+        position: absolute;
+        bottom: -150px;
+    }
+}
+
+
+.whatis {
+    &__container {
+        width: 100%;
+        justify-content: center;
+        display: flex;
+        font-family: "Pixelify Sans", sans-serif;
+    }
+
+    &__text {
+        font-weight: 100;
+        font-size: 28px;
+        color: $textBlack-color;
+    }
+    .dud {
+        color: $third-color;
+    }
+    &__img {
+        margin-top: 30px;
+        position: absolute;
+        left: 0;
+        // background-image: url('../assets/images/brainCrop.png');
+        width: 300px;
+        justify-content: end;
+        background-size: cover;
+    }
+}
+
+
+
+
+.game {
+    display: flex;
+    align-items: flex-start;
+    color: #fff;
+    margin-bottom: $margin-3;
+
+    &__img {
+        width: 300px;
+        border: 10px solid $textWhite-color;
+        clip-path: polygon(0 10px,10px 10px,10px 0,calc(100% - 10px) 0,calc(100% - 10px) 10px,100% 10px,100% calc(100% - 10px),calc(100% - 10px) calc(100% - 10px),calc(100% - 10px) 100%,10px 100%,10px calc(100% - 10px),0 calc(100% - 10px));
+
+    }
+
+    h2 {
+        font-family: "Radio Canada Big", sans-serif;
+        color: $textBlack-color;
+    }
+
+    &__right {
+        flex: 1;
+        padding: 100px;
+        box-sizing: border-box;
+    }
+    &__left {
+        flex: 1;
+        position: sticky;
+        will-change: transform;
+        text-align: center;
+        box-sizing: border-box;
+        margin-top: 100px;
+        margin-bottom: 100px;
+    }
+    &__box--right {
+        // border: 1px solid $textBlack-color;
+        // border-radius: 20px;
+        margin-bottom: 30px;
+        padding: 40px 20px;
+        transition: transform 0.3s ease;
+        box-sizing: border-box;
+        max-width: 50ch;
+        border: 10px solid $textWhite-color;
+        clip-path: polygon(0 10px,10px 10px,10px 0,calc(100% - 10px) 0,calc(100% - 10px) 10px,100% 10px,100% calc(100% - 10px),calc(100% - 10px) calc(100% - 10px),calc(100% - 10px) 100%,10px 100%,10px calc(100% - 10px),0 calc(100% - 10px));
+
+    }
+    
+}
+
+
+
+
+.members {
+    height: 450vh;
+
+    &__container{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: center;
+        height: 100vh;
+    }
+    &__content {
+        &--front{
+            background: #292929;
+        }
+
+        .cf-inner .members__inner{
+            align-items: stretch;
+            transform-style: preserve-3d;
+            perspective: 1000px;
+            backface-visibility: hidden;
+            transform: translateZ(95px) scale(0.81);
+            text-align: center;
+            position: relative;
+            z-index: 2;
+            font-size: $p-mobile;
+            font-family: "Radio Canada Big", sans-serif;
+        }
+
+        &--iner{
+            width: 30%;
+            color: #fff;
+            position: relative;
+            transform-style: preserve-3d;
+            perspective: 1000px;
+            backface-visibility: hidden;
+            transition: .9s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    
+            .members__content--front, .members__content--back{
+                position: relative;
+                transform-style: preserve-3d;
+                perspective: 1000px;
+                backface-visibility: hidden;
+                height: 100%;
+                max-height: 500px;
+                display: flex;
+                justify-content: center;
+                align-items: center; 
+                border: 10px solid $textWhite-color;              
+                clip-path: polygon(0 10px,10px 10px,10px 0,calc(100% - 10px) 0,calc(100% - 10px) 10px,100% 10px,100% calc(100% - 10px),calc(100% - 10px) calc(100% - 10px),calc(100% - 10px) 100%,10px 100%,10px calc(100% - 10px),0 calc(100% - 10px));
+            }
+
+            .cf-inner{
+                transform-style: preserve-3d;
+                backface-visibility: hidden;
+                width: 100%;
+                padding: 150px 30px;
+
+                &:before,
+                &:after{
+                    content: "";
+                    position: absolute;
+                    width: 50px;
+                    height: 50px;
+                    z-index: 10;
+                }
+            }
+
+            // &:hover {
+            //     .members__content--front{
+            //         transform: rotateY(-180deg);
+            //     }
+            // }
+        }
+    }
+
+    
+    .serv-num {
+        width: 50px !important;
+        height: 50px !important;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        cursor: pointer;
+
+        // &:hover {
+        //     border: 1px solid white;
+        //     transition:  ease-in-out;
+        //     bottom: 29px;
+        //     left: 19px;
+        // }
+
+        i {
+            color: $textWhite-color;
+
+            &:hover {
+                font-weight: bolder;
+                color: $third-color;
+            }
+        }
+    }
+    
+    .flipFront {
+        transform: rotateY(-180deg);
+    }
+
+    .flipBack {
+        transform: rotateY(0deg);
+    }
+
+    &__icon {
+    
+        .social {
+            text-align: center;
+            // justify-content: center;
+            margin: auto;
+            // display: flex;
+            width: 100%;
+            position: fixed;
+            z-index: 10;
+            justify-content: center;
+            margin-left: -30px;
+
+
+            &__amandine {
+                width: 100%;
+                margin-left: -25px;
+                justify-content: center;
+            }
+
+            &__link {
+                display: inline-flex;
+                justify-content: center;
+                align-items: center;
+                width: 2rem;
+                height: 2rem;
+                background: transparent;
+                border: .2rem solid $textWhite-color;
+                border-radius: 50%;
+                box-shadow: 0 .2rem .5rem $textWhite-color;
+                font-size: $p-mobile;
+                color: $textWhite-color;
+                margin: 2.5rem .75rem 3rem;
+                transition: .5s ease;
+                text-decoration: none;
+
+                &:hover {
+                    background: transparent;
+                    color: $bg-color;
+                    border-color: $bg-color;
+                    transform:scale(1.1);
+                    box-shadow: 0 .2rem .5rem $bg-color;
+
+                }
+            }   
+        }
+    }
+
+    &__bg{
+        background-image: url('../assets/images/members/julie.png');
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        background-position: center;
+        background-size: cover;
+
+        &--amandine {
+            background-image: url('../assets/images/members/amandine.png');
+        }
+        &--gabriel {
+            background-image: url('../assets/images/members/gabriel.png');
+        }
+        &--pearl {
+            background-image: url('../assets/images/members/pearl.png');
+        }
+        &--guillaume {
+            background-image: url('../assets/images/members/guillaume.png');
+        }
+    }
+    &__overlay{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #000;
+        opacity: 0.4;
+        z-index: 3;
+    }
+    &__verso {
+        text-align: left;
+        font-size: $p-mobile;
+        font-family: "Radio Canada Big", sans-serif;
+    }
+}
+
+
+.members__content--iner > *{
+    transition: .9s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    margin: $margin-2 auto;
+}
+
+// .members__content--iner .cf-inner{
+//     transform-style: preserve-3d;
+//     backface-visibility: hidden;
+//     width: 100%;
+//     padding: 150px 30px;
+// }
+
+        // .members__content--front .cf-inner:before, .members__content--front .cf-inner:after{
+        // content: "";
+        //     position: absolute;
+        //     width: 50px;
+        //     height: 50px;
+        //     z-index: 10;
+        // }
+
+        // .members__content--front .cf-inner:before{
+        //     top: 20px;
+        //     left: 20px;
+        //     border-left: 1px dotted;
+        //     border-top: 1px dotted;
+        //     border-color: rgba(255, 255, 255, .6);
+        // }
+
+        // .members__content--front .cf-inner:after{
+        //     bottom: 20px;
+        //     right: 20px;
+        //     border-right: 1px dotted;
+        //     border-bottom: 1px dotted;
+        //     border-color: rgba(255, 255, 255, .6);
+        // }
+
+// .members__bg{
+//     background-image: url('../assets/images/members/julieGradient.png');
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     width: 100%;
+//     height: 100%;
+//     z-index: 1;
+//     background-position: center;
+//     background-size: cover;
+// }
+
+// .members__overlay{
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     width: 100%;
+//     height: 100%;
+//     background-color: #000;
+//     opacity: 0.4;
+//     z-index: 3;
+// }
+
+.members__content--iner .cf-inner .members__inner{
+    align-items: stretch;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    backface-visibility: hidden;
+    transform: translateZ(95px) scale(0.81);
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    font-size: $p-mobile;
+    font-family: "Radio Canada Big", sans-serif;
+}
+// .members__verso {
+//     text-align: left;
+//     font-size: $p-mobile;
+//     font-family: "Radio Canada Big", sans-serif;
+// }
+
+.members__content--iner .cf-inner .members__inner h2{
+    position: relative;
+    font-size: 22px;
+    font-weight: 800;
+    padding-bottom: 20px;
+    color: $textWhite-color;
+}
+
+.members__content--iner .cf-inner .members__inner h2:after{
+    content: "";
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    width: 50px;
+    height: 2px;
+    margin-left: -25px;
+    background: $bg-color;
+}
+
+.members__content--iner .cf-inner .members__inner h4{
+    display: inline-block;
+    color: $textWhite-color;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 2px;
+    margin: 0 4px;
+}
+
+.serv-num {
+    position: absolute;
+    top: 30px;
+    right: 20px;
+    color: $textWhite-color;
+    z-index: 3;
+    font-size: 20px;
+    width: 50px !important;
+    height: 50px !important;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+
+.members__content--iner .members__content--back{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+    //height: 100%;
+    z-index: 0;
+    transform: rotateY(180deg);
+    background: $text-color;
+}
+
+
+
+.members__content--back i{
+    font-size: 54px;
+    position: relative;
+}
+.members__content--back {
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+.members__content--back:after{
+    color: $bg-color;
+    position: absolute;
+    content: "\25CF\25CF\25CF";
+    width: 50px;
+    left: 50%;
+    bottom: 30px;
+    font-size: 9px;
+    letter-spacing: 4px;
+    margin-left: -5px;
+}
+.members__content--back {
+    position: relative;
+    pointer-events: all;
+
+    .arrowBack {
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        height: 50px !important;
+        width: 50px !important;
+        pointer-events: all;
+        cursor: pointer;
+        pointer-events: all;
+
+        &2 {
+            top: 120px;
+        }
+        &3 {
+            top: 40px;
+        }
+        &4 {
+            top: 140px;
+        }
+        &5 {
+            top: 110px;
+        }
+
+        i {
+            font-size: $p-mobile;
+        }
+    }
+}
+
+// .fas{
+//     font-weight: 300;
+//     font-family: "Radio Canada Big", sans-serif;
+// }
+
+// .fa-utensils:before{
+//     content: "\f2e7";
+// }
+
+.members__content--iner .cf-inner .members__inner p{
+    color: $textWhite-color;
+    font-size: $p-mobile;
+    line-height: 1.6;
+    padding-bottom: 10px;
+    font-weight: 400;
+}
+
+.members__content--back p {
+    text-align: left;
+}
+
+
+
+
+
+.footer {
+    background-color: $text-color;
+    overflow-x: hidden;
+    text-align: center;
+    margin-bottom: 0;
+    margin-top: $margin-3;
+    padding: 1rem 0;
+    padding-top: 30px;
+    bottom: 0%;
+    width: 100%;
+    color: $textWhite-color;
+
+    &__contact {
+        list-style: none;
+        text-decoration: none;
+        text-align: center;
+        padding-left: 0;
+    }
+    &__link {
+        color: $textWhite-color;
+        text-decoration: none;
+        font-size: $p-mobile;
+
+        &:hover {
+            transition: .2s ease-out;
+            color: $bg-color;
+        }
+    }
+    p {
+        color: $textWhite-color;
+        cursor: pointer;
+    }
+}
+
+
+
+
+
+@media screen and (min-width: 489px) {
+    .section {
+        margin-bottom: $margint-4;
+    }
+    .intro {
+        height: auto;
+        margin-bottom: $margint-4;
+        &__txt {
+            max-width: 50ch;
+            margin: auto;
+        }
+    }
+
+    .whatis {
+        p {
+            max-width: 50ch;
+            margin: auto;
+        }
+        &__img {
+            width: 400px;
+        }
+    }
+
+    .pourquoi {
+        &__txt {
+            max-width: 50ch;
+            margin: auto;
+        }
+    }
+}
+
+// @media screen and (min-width: 500px ) {
+//     .game {
+//         &__right {
+//             margin: auto;
+//             width: 100%;
+//         }
+//     }
+// }
+
+@media (max-width: 768px) {
+    .game {
+        flex-direction: column;
+        align-items: center;
+
+        &__left, 
+        &__right {
+            padding: 20px;
+            // width: 100%;
+        }
+        &__left {
+        position: static;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        }
+        &__right {
+            margin: auto;
+        }
+    } 
+}
+
+@media screen and (max-width:768px){
+    .members__content--iner{
+        width:80%;
+    } 
+}
+@media screen and (min-width:768px){
+    .members {
+        height: 290vh;
+
+        &__content {
+            &--iner {
+                width: 300px;
+                margin: auto 20px;
+            }
+        }
+    } 
+}
+
+@media screen and (min-width:789px){
+    .section {
+        margin-bottom: $margind-4;
+    }
+    .members{
+        height: 300vh;
+    } 
+}
+
+@media screen and (min-width:1000px){
+    .members{
+        height: 150vh;
+    } 
+}
