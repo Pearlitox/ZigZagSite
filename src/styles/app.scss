@@ -69,6 +69,7 @@ body::-webkit-scrollbar-thumb {
     }
     &__img {
         position: absolute;
+        opacity: 0.8;
 
         &--top {
             right: -110px;
@@ -81,13 +82,15 @@ body::-webkit-scrollbar-thumb {
             bottom: -38px;
             width: 450px;
             opacity: 0.8;
-            animation: move-right 15s linear infinite;
+            animation: move-right 10s linear infinite;
         }
         &--topleft {
             display: none;
+            animation: move-right 15s linear infinite;
         }
         &--bottom {
             display: none;
+            animation: move-right 15s linear infinite;
         }
     }
 
@@ -792,6 +795,20 @@ body::-webkit-scrollbar-thumb {
     .members{
         height: 300vh;
     } 
+    .header {
+        &__img {
+            &--topleft {
+                display: block;
+                top: 27px;
+                animation: move-right 15s linear infinite;
+                width: 150px;
+            }
+            &--bottom {
+                display: block;
+                animation: move-right 15s linear infinite;
+            }
+        }
+    }
 }
 
 @media screen and (min-width:1000px){

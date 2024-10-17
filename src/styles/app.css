@@ -76,6 +76,7 @@ body::-webkit-scrollbar-thumb {
 }
 .header__img {
   position: absolute;
+  opacity: 0.8;
 }
 .header__img--top {
   right: -110px;
@@ -88,13 +89,15 @@ body::-webkit-scrollbar-thumb {
   bottom: -38px;
   width: 450px;
   opacity: 0.8;
-  animation: move-right 15s linear infinite;
+  animation: move-right 10s linear infinite;
 }
 .header__img--topleft {
   display: none;
+  animation: move-right 15s linear infinite;
 }
 .header__img--bottom {
   display: none;
+  animation: move-right 15s linear infinite;
 }
 @keyframes move-top {
   0% {
@@ -627,6 +630,16 @@ body::-webkit-scrollbar-thumb {
   }
   .members {
     height: 300vh;
+  }
+  .header__img--topleft {
+    display: block;
+    top: 27px;
+    animation: move-right 15s linear infinite;
+    width: 150px;
+  }
+  .header__img--bottom {
+    display: block;
+    animation: move-right 15s linear infinite;
   }
 }
 @media screen and (min-width: 1000px) {
