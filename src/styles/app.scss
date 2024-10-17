@@ -301,6 +301,10 @@ body::-webkit-scrollbar-thumb {
             z-index: 2;
             font-size: $p-mobile;
             font-family: "Radio Canada Big", sans-serif;
+
+            h2 {
+                font-size: $h2-tablet !important;
+            }
         }
 
         &--iner{
@@ -885,8 +889,18 @@ body::-webkit-scrollbar-thumb {
 }
 
 @media screen and (min-width:1000px){
+    .header {
+        h1 {
+            font-size: 400px;
+        }
+        &__title {
+            text-align: center;
+            margin: auto;
+        }
+    }
     .members{
-        height: 250vh;
+        height: auto;
+        margin-bottom: 0;
     } 
     .whatis {
         position: relative;
@@ -913,15 +927,15 @@ body::-webkit-scrollbar-thumb {
     }
 }
 
-@media screen and (min-width:1500px){
-    .pourquoi {
-        &__img {
-            &--1 {
-                width: 1000px;
-                top: -600px;
-                right: 50%;
-                transform: translateX(50%);
-            }
-        }
-    }
-}
+// @media screen and (min-width:1500px){
+//     .pourquoi {
+//         &__img {
+//             &--1 {
+//                 width: 1000px;
+//                 top: -600px;
+//                 right: 50%;
+//                 transform: translateX(50%);
+//             }
+//         }
+//     }
+// }

@@ -699,8 +699,16 @@ body::-webkit-scrollbar-thumb {
   }
 }
 @media screen and (min-width: 1000px) {
+  .header h1 {
+    font-size: 400px;
+  }
+  .header__title {
+    text-align: center;
+    margin: auto;
+  }
   .members {
-    height: 250vh;
+    height: auto;
+    margin-bottom: 0;
   }
   .whatis {
     position: relative;
@@ -720,13 +728,5 @@ body::-webkit-scrollbar-thumb {
     right: 50%;
     transform: translateX(50%);
     opacity: 0.7;
-  }
-}
-@media screen and (min-width: 1500px) {
-  .pourquoi__img--1 {
-    width: 1000px;
-    top: -600px;
-    right: 50%;
-    transform: translateX(50%);
   }
 }/*# sourceMappingURL=app.css.map */
