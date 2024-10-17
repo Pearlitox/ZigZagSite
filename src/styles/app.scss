@@ -1,6 +1,16 @@
 @import 'utils/variables';
 @import 'components/type';
 
+
+@font-face {
+    font-family: "zigzag";
+    src: url("../assets/font/INVASION2000.TTF");
+}
+@font-face {
+    font-family: "fibrish";
+    src: url("../assets/font/fibberish.ttf");
+}
+
 .index {
     background-color: $bg-color;
     margin: 0;
@@ -8,8 +18,7 @@
     overflow-x: hidden;
 
     h1 {
-        font-size: $h1-mobile;
-        font-family: "Pixelify Sans", sans-serif;
+        font-family: zigzag;
         text-align: center;
         color: $textBlack-color;
     }
@@ -23,6 +32,7 @@
     h3 {
         margin: 0%;
         margin-bottom: $margin-1;
+        font-family: zigzag;
     }
 }
 
@@ -154,7 +164,7 @@ body::-webkit-scrollbar-thumb {
     from { opacity: 0; }
     65% {
         opacity: 1;
-        text-shadow: 0 0 20px $fourth-color;
+        text-shadow: 0 0 20px $textBlack-color;
     }
     75% {
         opacity: 1;
@@ -192,6 +202,7 @@ body::-webkit-scrollbar-thumb {
         font-weight: 100;
         font-size: 28px;
         color: $textBlack-color;
+        font-family: zigzag;
     }
     .dud {
         color: $third-color;
@@ -224,7 +235,7 @@ body::-webkit-scrollbar-thumb {
     }
 
     h2 {
-        font-family: "Radio Canada Big", sans-serif;
+        font-family: zigzag;
         color: $textBlack-color;
     }
 
@@ -776,6 +787,36 @@ body::-webkit-scrollbar-thumb {
     } 
 }
 @media screen and (min-width:768px){
+    h3 {
+        font-size: $h3-desktop;
+    }
+    p {
+        font-size: $p-desktop;
+    }
+    .header {
+        &__txt {
+            h1 {
+                font-size: 200px;
+                margin-bottom: 0;
+                margin-top: 0;
+            }
+            h2 {
+                font-size: 150px;
+            }
+        }
+    }
+    .whatis {
+        &__text {
+            font-size: $h3-desktop;
+        }
+    }
+    .pourquoi {
+        &__txt {
+            span {
+                font-size: $p-desktop;
+            }
+        }
+    }
     .members {
         height: 290vh;
 

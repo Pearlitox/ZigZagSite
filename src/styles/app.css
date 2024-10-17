@@ -10,6 +10,14 @@ body {
   color: #050505;
 }
 
+@font-face {
+  font-family: "zigzag";
+  src: url("../assets/font/INVASION2000.TTF");
+}
+@font-face {
+  font-family: "fibrish";
+  src: url("../assets/font/fibberish.ttf");
+}
 .index {
   background-color: #DFC0AE;
   margin: 0;
@@ -17,8 +25,7 @@ body {
   overflow-x: hidden;
 }
 .index h1 {
-  font-size: 80px;
-  font-family: "Pixelify Sans", sans-serif;
+  font-family: zigzag;
   text-align: center;
   color: #542B0E;
 }
@@ -32,6 +39,7 @@ body {
 .index h3 {
   margin: 0%;
   margin-bottom: 28px;
+  font-family: zigzag;
 }
 
 body::-webkit-scrollbar {
@@ -154,7 +162,7 @@ body::-webkit-scrollbar-thumb {
   }
   65% {
     opacity: 1;
-    text-shadow: 0 0 20px #85461A;
+    text-shadow: 0 0 20px #542B0E;
   }
   75% {
     opacity: 1;
@@ -190,6 +198,7 @@ body::-webkit-scrollbar-thumb {
   font-weight: 100;
   font-size: 28px;
   color: #542B0E;
+  font-family: zigzag;
 }
 .whatis .dud {
   color: #7E924A;
@@ -216,7 +225,7 @@ body::-webkit-scrollbar-thumb {
           clip-path: polygon(0 10px, 10px 10px, 10px 0, calc(100% - 10px) 0, calc(100% - 10px) 10px, 100% 10px, 100% calc(100% - 10px), calc(100% - 10px) calc(100% - 10px), calc(100% - 10px) 100%, 10px 100%, 10px calc(100% - 10px), 0 calc(100% - 10px));
 }
 .game h2 {
-  font-family: "Radio Canada Big", sans-serif;
+  font-family: zigzag;
   color: #542B0E;
 }
 .game__right {
@@ -616,6 +625,26 @@ body::-webkit-scrollbar-thumb {
   }
 }
 @media screen and (min-width: 768px) {
+  h3 {
+    font-size: 36px;
+  }
+  p {
+    font-size: 24px;
+  }
+  .header__txt h1 {
+    font-size: 200px;
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+  .header__txt h2 {
+    font-size: 150px;
+  }
+  .whatis__text {
+    font-size: 36px;
+  }
+  .pourquoi__txt span {
+    font-size: 24px;
+  }
   .members {
     height: 290vh;
   }
