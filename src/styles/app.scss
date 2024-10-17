@@ -186,6 +186,10 @@ body::-webkit-scrollbar-thumb {
     &__img {
         position: absolute;
         bottom: -150px;
+
+        &--1 {
+            display: none;
+        }
     }
 }
 
@@ -751,16 +755,27 @@ body::-webkit-scrollbar-thumb {
     }
 }
 
-// @media screen and (min-width: 500px ) {
-//     .game {
-//         &__right {
-//             margin: auto;
-//             width: 100%;
-//         }
-//     }
-// }
+@media screen and (min-width: 500px ) {
+    // .game {
+    //     &__right {
+    //         margin: auto;
+    //         width: 100%;
+    //     }
+    // }
+    .pourquoi {
+        &__img {
+            &--1 {
+                display: block;
+                position: absolute;
+                width: 300px;
+                top: -150px;
+                right: 0;
+            }
+        }
+    }
+}
 
-@media (max-width: 768px) {
+@media (max-width: 850px) {
     .game {
         flex-direction: column;
         align-items: center;
@@ -796,7 +811,7 @@ body::-webkit-scrollbar-thumb {
     .header {
         &__txt {
             h1 {
-                font-size: 200px;
+                font-size: 150px;
                 margin-bottom: 0;
                 margin-top: 0;
             }
@@ -814,6 +829,18 @@ body::-webkit-scrollbar-thumb {
         &__txt {
             span {
                 font-size: $p-desktop;
+            }
+        }
+        &__img {
+            display: none;
+            bottom: -320px;
+            &--1 {
+                display: block;
+                position: absolute;
+                width: 300px;
+                top: -150px;
+                right: 50%;
+                transform: translateX(50%);
             }
         }
     }
@@ -850,10 +877,51 @@ body::-webkit-scrollbar-thumb {
             }
         }
     }
+    .pourquoi {
+        &__img {
+            display: block;
+        }
+    }
 }
 
 @media screen and (min-width:1000px){
     .members{
-        height: 150vh;
+        height: 250vh;
     } 
+    .whatis {
+        position: relative;
+        &__img {
+            position: absolute;
+            bottom: 100px;
+            opacity: 1;
+            z-index: -1;
+        }
+        p {
+            z-index: 10 !important;
+        }
+    }
+    .pourquoi {
+        &__img {
+            &--1 {
+                width: 500px;
+                top: -250px;
+                right: 50%;
+                transform: translateX(50%);
+                opacity: 0.7;
+            }
+        }
+    }
+}
+
+@media screen and (min-width:1500px){
+    .pourquoi {
+        &__img {
+            &--1 {
+                width: 1000px;
+                top: -600px;
+                right: 50%;
+                transform: translateX(50%);
+            }
+        }
+    }
 }

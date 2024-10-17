@@ -187,6 +187,9 @@ body::-webkit-scrollbar-thumb {
   position: absolute;
   bottom: -150px;
 }
+.pourquoi__img--1 {
+  display: none;
+}
 
 .whatis__container {
   width: 100%;
@@ -602,7 +605,16 @@ body::-webkit-scrollbar-thumb {
     margin: auto;
   }
 }
-@media (max-width: 768px) {
+@media screen and (min-width: 500px) {
+  .pourquoi__img--1 {
+    display: block;
+    position: absolute;
+    width: 300px;
+    top: -150px;
+    right: 0;
+  }
+}
+@media (max-width: 850px) {
   .game {
     flex-direction: column;
     align-items: center;
@@ -632,7 +644,7 @@ body::-webkit-scrollbar-thumb {
     font-size: 24px;
   }
   .header__txt h1 {
-    font-size: 200px;
+    font-size: 150px;
     margin-bottom: 0;
     margin-top: 0;
   }
@@ -644,6 +656,18 @@ body::-webkit-scrollbar-thumb {
   }
   .pourquoi__txt span {
     font-size: 24px;
+  }
+  .pourquoi__img {
+    display: none;
+    bottom: -320px;
+  }
+  .pourquoi__img--1 {
+    display: block;
+    position: absolute;
+    width: 300px;
+    top: -150px;
+    right: 50%;
+    transform: translateX(50%);
   }
   .members {
     height: 290vh;
@@ -670,9 +694,39 @@ body::-webkit-scrollbar-thumb {
     display: block;
     animation: move-right 15s linear infinite;
   }
+  .pourquoi__img {
+    display: block;
+  }
 }
 @media screen and (min-width: 1000px) {
   .members {
-    height: 150vh;
+    height: 250vh;
+  }
+  .whatis {
+    position: relative;
+  }
+  .whatis__img {
+    position: absolute;
+    bottom: 100px;
+    opacity: 1;
+    z-index: -1;
+  }
+  .whatis p {
+    z-index: 10 !important;
+  }
+  .pourquoi__img--1 {
+    width: 500px;
+    top: -250px;
+    right: 50%;
+    transform: translateX(50%);
+    opacity: 0.7;
+  }
+}
+@media screen and (min-width: 1500px) {
+  .pourquoi__img--1 {
+    width: 1000px;
+    top: -600px;
+    right: 50%;
+    transform: translateX(50%);
   }
 }/*# sourceMappingURL=app.css.map */
