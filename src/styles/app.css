@@ -15,8 +15,8 @@ body {
   src: url("../assets/font/INVASION2000.TTF");
 }
 @font-face {
-  font-family: "fibrish";
-  src: url("../assets/font/fibberish.ttf");
+  font-family: "canada";
+  src: url("../assets/font/RadioCanadaBig-Regular.ttf");
 }
 ::-moz-selection {
   background-color: #542B0E;
@@ -153,13 +153,10 @@ body::-webkit-scrollbar-thumb {
   color: #542B0E;
   text-align: center;
 }
-.titleAnim span {
-  animation: glow-in 0.5s both;
-}
 
 .intro {
   color: #542B0E;
-  font-family: "Radio Canada Big", sans-serif;
+  font-family: canada;
   height: 100vh;
   position: relative;
 }
@@ -284,7 +281,7 @@ body::-webkit-scrollbar-thumb {
   position: relative;
   z-index: 2;
   font-size: 18px;
-  font-family: "Radio Canada Big", sans-serif;
+  font-family: canada;
 }
 .members__content .cf-inner .members__inner h2 {
   font-size: 45px !important;
@@ -419,7 +416,7 @@ body::-webkit-scrollbar-thumb {
 .members__verso {
   text-align: left;
   font-size: 18px;
-  font-family: "Radio Canada Big", sans-serif;
+  font-family: canada;
 }
 
 .members__content--iner > * {
@@ -437,7 +434,7 @@ body::-webkit-scrollbar-thumb {
   position: relative;
   z-index: 2;
   font-size: 18px;
-  font-family: "Radio Canada Big", sans-serif;
+  font-family: canada;
 }
 
 .members__content--iner .cf-inner .members__inner h2 {
@@ -693,6 +690,9 @@ body::-webkit-scrollbar-thumb {
   }
 }
 @media screen and (min-width: 789px) {
+  .titleAnim {
+    font-size: 54px;
+  }
   .section {
     margin-bottom: 304px;
   }

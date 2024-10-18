@@ -7,8 +7,8 @@
     src: url("../assets/font/INVASION2000.TTF");
 }
 @font-face {
-    font-family: "fibrish";
-    src: url("../assets/font/fibberish.ttf");
+    font-family: "canada";
+    src: url("../assets/font/RadioCanadaBig-Regular.ttf");
 }
 
 ::selection {
@@ -148,14 +148,14 @@ body::-webkit-scrollbar-thumb {
     color: $textBlack-color;
     text-align: center;
     
-    span {
-      animation: glow-in .5s both;
-    }
+    // span {
+    //   animation: glow-in .5s both;
+    // }
 }
 
 .intro {
     color: $textBlack-color;
-    font-family: "Radio Canada Big", sans-serif;
+    font-family: canada;
     height: 100vh;
     position: relative;
     //background-color: black;
@@ -325,7 +325,7 @@ body::-webkit-scrollbar-thumb {
             position: relative;
             z-index: 2;
             font-size: $p-mobile;
-            font-family: "Radio Canada Big", sans-serif;
+            font-family: canada;
 
             h2 {
                 font-size: $h2-tablet !important;
@@ -498,7 +498,7 @@ body::-webkit-scrollbar-thumb {
     &__verso {
         text-align: left;
         font-size: $p-mobile;
-        font-family: "Radio Canada Big", sans-serif;
+        font-family: canada;
     }
 }
 
@@ -572,7 +572,7 @@ body::-webkit-scrollbar-thumb {
     position: relative;
     z-index: 2;
     font-size: $p-mobile;
-    font-family: "Radio Canada Big", sans-serif;
+    font-family: canada;
 }
 // .members__verso {
 //     text-align: left;
@@ -695,7 +695,7 @@ body::-webkit-scrollbar-thumb {
 
 // .fas{
 //     font-weight: 300;
-//     font-family: "Radio Canada Big", sans-serif;
+//     font-family: canada;
 // }
 
 // .fa-utensils:before{
@@ -893,6 +893,9 @@ body::-webkit-scrollbar-thumb {
 }
 
 @media screen and (min-width:789px){
+    .titleAnim {
+        font-size: $h2-desktop;
+    }
     .section {
         margin-bottom: $margind-4;
     }
