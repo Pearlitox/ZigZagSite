@@ -18,6 +18,15 @@ body {
   font-family: "fibrish";
   src: url("../assets/font/fibberish.ttf");
 }
+::-moz-selection {
+  background-color: #542B0E;
+  color: #DFC0AE;
+}
+::selection {
+  background-color: #542B0E;
+  color: #DFC0AE;
+}
+
 .index {
   background-color: #DFC0AE;
   margin: 0;
@@ -65,6 +74,7 @@ body::-webkit-scrollbar-thumb {
   background-attachment: fixed;
   background-image: url("../assets/images/bg-header.png");
   position: relative;
+  overflow: hidden;
   /* Animation pour img--right */
 }
 .header__txt {
@@ -156,21 +166,6 @@ body::-webkit-scrollbar-thumb {
   background-size: cover;
 }
 
-@keyframes glow-in {
-  from {
-    opacity: 0;
-  }
-  65% {
-    opacity: 1;
-    text-shadow: 0 0 20px #542B0E;
-  }
-  75% {
-    opacity: 1;
-  }
-  to {
-    opacity: 0.7;
-  }
-}
 .pourquoi {
   position: relative;
   height: 100vh;
@@ -178,17 +173,16 @@ body::-webkit-scrollbar-thumb {
 .pourquoi__text {
   font-size: 18px;
 }
-.pourquoi span {
-  opacity: 0.3; /* Tous les mots sont à 0.3 initialement */
-  transition: opacity 0.3s ease; /* Pour un léger effet de transition */
-  color: #542B0E;
-}
 .pourquoi__img {
   position: absolute;
   bottom: -150px;
 }
 .pourquoi__img--1 {
   display: none;
+}
+.pourquoi h3 {
+  color: #542B0E;
+  opacity: 1;
 }
 
 .whatis__container {
@@ -220,16 +214,20 @@ body::-webkit-scrollbar-thumb {
   align-items: flex-start;
   color: #fff;
   margin-bottom: 84px;
+  background-image: url("../assets/images/parquet.png");
+  background-size: contain;
 }
 .game__img {
   width: 300px;
-  border: 10px solid #F1EFEF;
-  -webkit-clip-path: polygon(0 10px, 10px 10px, 10px 0, calc(100% - 10px) 0, calc(100% - 10px) 10px, 100% 10px, 100% calc(100% - 10px), calc(100% - 10px) calc(100% - 10px), calc(100% - 10px) 100%, 10px 100%, 10px calc(100% - 10px), 0 calc(100% - 10px));
-          clip-path: polygon(0 10px, 10px 10px, 10px 0, calc(100% - 10px) 0, calc(100% - 10px) 10px, 100% 10px, 100% calc(100% - 10px), calc(100% - 10px) calc(100% - 10px), calc(100% - 10px) 100%, 10px 100%, 10px calc(100% - 10px), 0 calc(100% - 10px));
+  border: 10px solid #542B0E;
+  border-radius: 20px;
 }
 .game h2 {
   font-family: zigzag;
   color: #542B0E;
+}
+.game .titleAnim {
+  color: #F1EFEF;
 }
 .game__right {
   flex: 1;
@@ -246,14 +244,14 @@ body::-webkit-scrollbar-thumb {
   margin-bottom: 100px;
 }
 .game__box--right {
+  border-radius: 20px;
   margin-bottom: 30px;
   padding: 40px 20px;
   transition: transform 0.3s ease;
   box-sizing: border-box;
   max-width: 50ch;
-  border: 10px solid #F1EFEF;
-  -webkit-clip-path: polygon(0 10px, 10px 10px, 10px 0, calc(100% - 10px) 0, calc(100% - 10px) 10px, 100% 10px, 100% calc(100% - 10px), calc(100% - 10px) calc(100% - 10px), calc(100% - 10px) 100%, 10px 100%, 10px calc(100% - 10px), 0 calc(100% - 10px));
-          clip-path: polygon(0 10px, 10px 10px, 10px 0, calc(100% - 10px) 0, calc(100% - 10px) 10px, 100% 10px, 100% calc(100% - 10px), calc(100% - 10px) calc(100% - 10px), calc(100% - 10px) 100%, 10px 100%, 10px calc(100% - 10px), 0 calc(100% - 10px));
+  border: 10px solid #542B0E;
+  background-color: #DFC0AE;
 }
 
 .members {
@@ -280,6 +278,9 @@ body::-webkit-scrollbar-thumb {
   z-index: 2;
   font-size: 18px;
   font-family: "Radio Canada Big", sans-serif;
+}
+.members__content .cf-inner .members__inner h2 {
+  font-size: 45px !important;
 }
 .members__content--iner {
   width: 30%;
@@ -520,18 +521,21 @@ body::-webkit-scrollbar-thumb {
   pointer-events: all;
   cursor: pointer;
   pointer-events: all;
+  background-color: #DFC0AE;
+  border-radius: 50px;
+  color: #542B0E;
 }
 .members__content--back .arrowBack2 {
   top: 120px;
 }
 .members__content--back .arrowBack3 {
-  top: 40px;
+  top: 70px;
 }
 .members__content--back .arrowBack4 {
-  top: 140px;
+  top: 130px;
 }
 .members__content--back .arrowBack5 {
-  top: 110px;
+  top: 100px;
 }
 .members__content--back .arrowBack i {
   font-size: 18px;
@@ -560,6 +564,7 @@ body::-webkit-scrollbar-thumb {
   bottom: 0%;
   width: 100%;
   color: #F1EFEF;
+  margin-top: 500px;
 }
 .footer__contact {
   list-style: none;
@@ -700,14 +705,18 @@ body::-webkit-scrollbar-thumb {
 }
 @media screen and (min-width: 1000px) {
   .header h1 {
-    font-size: 400px;
+    font-size: 300px;
   }
   .header__title {
     text-align: center;
     margin: auto;
   }
+  .intro__img {
+    width: 500px;
+  }
   .members {
     height: auto;
+    height: 100vh;
     margin-bottom: 0;
   }
   .whatis {
@@ -715,12 +724,16 @@ body::-webkit-scrollbar-thumb {
   }
   .whatis__img {
     position: absolute;
-    bottom: 100px;
+    bottom: 200px;
     opacity: 1;
     z-index: -1;
+    width: 500px;
   }
   .whatis p {
     z-index: 10 !important;
+  }
+  .pourquoi__img {
+    bottom: 150px;
   }
   .pourquoi__img--1 {
     width: 500px;
@@ -728,5 +741,10 @@ body::-webkit-scrollbar-thumb {
     right: 50%;
     transform: translateX(50%);
     opacity: 0.7;
+  }
+}
+@media screen and (min-width: 1500px) {
+  .members {
+    height: 50vh;
   }
 }/*# sourceMappingURL=app.css.map */

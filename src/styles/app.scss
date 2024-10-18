@@ -11,6 +11,11 @@
     src: url("../assets/font/fibberish.ttf");
 }
 
+::selection {
+    background-color: $textBlack-color;
+    color: $bg-color;
+}
+
 .index {
     background-color: $bg-color;
     margin: 0;
@@ -60,6 +65,7 @@ body::-webkit-scrollbar-thumb {
     background-attachment: fixed;
     background-image: url('../assets/images/bg-header.png');
     position: relative;
+    overflow: hidden;
 
     &__txt {
         padding: 15px;
@@ -160,17 +166,17 @@ body::-webkit-scrollbar-thumb {
     }
 }
 
-@keyframes glow-in {
-    from { opacity: 0; }
-    65% {
-        opacity: 1;
-        text-shadow: 0 0 20px $textBlack-color;
-    }
-    75% {
-        opacity: 1;
-    }
-    to { opacity: 0.7; }
-}
+// @keyframes glow-in {
+//     from { opacity: 0; }
+//     65% {
+//         opacity: 1;
+//         text-shadow: 0 0 20px $textBlack-color;
+//     }
+//     75% {
+//         opacity: 1;
+//     }
+//     to { opacity: 0.7; }
+// }
   
 .pourquoi {
     position: relative;
@@ -178,11 +184,11 @@ body::-webkit-scrollbar-thumb {
     &__text {
         font-size: $p-mobile;
     }
-    span {
-        opacity: 0.3; /* Tous les mots sont à 0.3 initialement */
-        transition: opacity 0.3s ease; /* Pour un léger effet de transition */
-        color: $textBlack-color;
-    }
+    // span { // ancien scrollreveal
+    //     opacity: 0.3; /* Tous les mots sont à 0.3 initialement */
+    //     transition: opacity 0.3s ease; /* Pour un léger effet de transition */
+    //     color: $textBlack-color;
+    // }
     &__img {
         position: absolute;
         bottom: -150px;
@@ -190,6 +196,10 @@ body::-webkit-scrollbar-thumb {
         &--1 {
             display: none;
         }
+    }
+    h3 {
+        color: $textBlack-color;
+        opacity: 1;
     }
 }
 
@@ -230,17 +240,23 @@ body::-webkit-scrollbar-thumb {
     align-items: flex-start;
     color: #fff;
     margin-bottom: $margin-3;
+    background-image: url('../assets/images/parquet.png');
+    background-size: contain;
 
     &__img {
         width: 300px;
-        border: 10px solid $textWhite-color;
-        clip-path: polygon(0 10px,10px 10px,10px 0,calc(100% - 10px) 0,calc(100% - 10px) 10px,100% 10px,100% calc(100% - 10px),calc(100% - 10px) calc(100% - 10px),calc(100% - 10px) 100%,10px 100%,10px calc(100% - 10px),0 calc(100% - 10px));
+        border: 10px solid $textBlack-color;
+        border-radius: 20px;
+        // clip-path: polygon(0 10px,10px 10px,10px 0,calc(100% - 10px) 0,calc(100% - 10px) 10px,100% 10px,100% calc(100% - 10px),calc(100% - 10px) calc(100% - 10px),calc(100% - 10px) 100%,10px 100%,10px calc(100% - 10px),0 calc(100% - 10px));
 
     }
 
     h2 {
         font-family: zigzag;
         color: $textBlack-color;
+    }
+    .titleAnim {
+        color: $textWhite-color;
     }
 
     &__right {
@@ -258,15 +274,15 @@ body::-webkit-scrollbar-thumb {
         margin-bottom: 100px;
     }
     &__box--right {
-        // border: 1px solid $textBlack-color;
-        // border-radius: 20px;
+        border-radius: 20px;
         margin-bottom: 30px;
         padding: 40px 20px;
         transition: transform 0.3s ease;
         box-sizing: border-box;
         max-width: 50ch;
-        border: 10px solid $textWhite-color;
-        clip-path: polygon(0 10px,10px 10px,10px 0,calc(100% - 10px) 0,calc(100% - 10px) 10px,100% 10px,100% calc(100% - 10px),calc(100% - 10px) calc(100% - 10px),calc(100% - 10px) 100%,10px 100%,10px calc(100% - 10px),0 calc(100% - 10px));
+        border: 10px solid $textBlack-color;
+        background-color: $bg-color;
+        // clip-path: polygon(0 10px,10px 10px,10px 0,calc(100% - 10px) 0,calc(100% - 10px) 10px,100% 10px,100% calc(100% - 10px),calc(100% - 10px) calc(100% - 10px),calc(100% - 10px) 100%,10px 100%,10px calc(100% - 10px),0 calc(100% - 10px));
 
     }
     
@@ -645,18 +661,21 @@ body::-webkit-scrollbar-thumb {
         pointer-events: all;
         cursor: pointer;
         pointer-events: all;
+        background-color: $bg-color;
+        border-radius: 50px;
+        color: $textBlack-color;
 
         &2 {
             top: 120px;
         }
         &3 {
-            top: 40px;
+            top: 70px;
         }
         &4 {
-            top: 140px;
+            top: 130px;
         }
         &5 {
-            top: 110px;
+            top: 100px;
         }
 
         i {
@@ -701,6 +720,7 @@ body::-webkit-scrollbar-thumb {
     bottom: 0%;
     width: 100%;
     color: $textWhite-color;
+    margin-top: 500px;
 
     &__contact {
         list-style: none;
@@ -891,24 +911,31 @@ body::-webkit-scrollbar-thumb {
 @media screen and (min-width:1000px){
     .header {
         h1 {
-            font-size: 400px;
+            font-size: 300px;
         }
         &__title {
             text-align: center;
             margin: auto;
         }
     }
+    .intro {
+        &__img {
+            width: 500px;
+        }
+    }
     .members{
         height: auto;
+        height: 100vh;
         margin-bottom: 0;
     } 
     .whatis {
         position: relative;
         &__img {
             position: absolute;
-            bottom: 100px;
+            bottom: 200px;
             opacity: 1;
             z-index: -1;
+            width: 500px;
         }
         p {
             z-index: 10 !important;
@@ -916,6 +943,7 @@ body::-webkit-scrollbar-thumb {
     }
     .pourquoi {
         &__img {
+            bottom: 150px;
             &--1 {
                 width: 500px;
                 top: -250px;
@@ -927,15 +955,18 @@ body::-webkit-scrollbar-thumb {
     }
 }
 
-// @media screen and (min-width:1500px){
-//     .pourquoi {
-//         &__img {
-//             &--1 {
-//                 width: 1000px;
-//                 top: -600px;
-//                 right: 50%;
-//                 transform: translateX(50%);
-//             }
-//         }
-//     }
-// }
+@media screen and (min-width:1500px){
+    // .pourquoi {
+    //     &__img {
+    //         &--1 {
+    //             width: 1000px;
+    //             top: -600px;
+    //             right: 50%;
+    //             transform: translateX(50%);
+    //         }
+    //     }
+    // }
+    .members {
+        height: 50vh;
+    }
+}

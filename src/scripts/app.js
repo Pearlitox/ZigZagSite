@@ -22,32 +22,32 @@ glowInTexts.forEach(glowInText => {
 
 
 // le Text Animation
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+// import gsap from 'gsap';
+// import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 
-gsap.registerPlugin(ScrollTrigger);
+// gsap.registerPlugin(ScrollTrigger);
 
 
-const textElement = document.querySelector('#text');
-const words = textElement.innerText.split(' ');
-textElement.innerHTML = words.map(word => `<span>${word} </span>`).join('');
+// const textElement = document.querySelector('#text');
+// const words = textElement.innerText.split(' ');
+// textElement.innerHTML = words.map(word => `<span>${word} </span>`).join('');
 
 
-const tl = gsap.timeline({
-    scrollTrigger: {
-        trigger: textElement,
-        start: "top 10%",  // Le scroll commence quand 40% du texte est visible
-        end: "+=150",     // Longueur de l'animation (peut ajuster selon la longueur du texte)
-        scrub: 1,          // Rendre l'animation synchronisée avec le scroll
-        pin: true,         // Bloque le scroll tant que l'animation n'est pas finie
-    }
-});
+// const tl = gsap.timeline({
+//     scrollTrigger: {
+//         trigger: textElement,
+//         start: "bottom 90%",  // Le scroll commence quand 40% du texte est visible
+//         end: "+=150",     // Longueur de l'animation (peut ajuster selon la longueur du texte)
+//         scrub: 1,          // Rendre l'animation synchronisée avec le scroll
+//         pin: true,         // Bloque le scroll tant que l'animation n'est pas finie
+//     }
+// });
 
 
-gsap.utils.toArray("#text span").forEach((word, i) => {
-    tl.to(word, { opacity: 1, duration: 0.2 }, i * 0.1); // Animation pour chaque mot
-});
+// gsap.utils.toArray("#text span").forEach((word, i) => {
+//     tl.to(word, { opacity: 1, duration: 0.2 }, i * 0.1); // Animation pour chaque mot
+// });
 
 
 
@@ -135,6 +135,8 @@ const next = () => {
 };
 
 next();
+
+
 
 
 // face à face
