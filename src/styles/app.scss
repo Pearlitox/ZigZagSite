@@ -28,7 +28,9 @@
         color: $textBlack-color;
     }
     h2 {
-        font-family: "Pixelify Sans", sans-serif;
+        margin: 0%;
+        margin-bottom: $margin-1;
+        font-family: zigzag;
     }
     p {
         line-height: 1.6;
@@ -76,7 +78,7 @@ body::-webkit-scrollbar-thumb {
             font-family: "Pixelify Sans", sans-serif;
             color: $textWhite-color;
             text-shadow: 0px 5px 0px #3351E3; 
-            max-width: 40ch;
+            max-width: 40ch;   
         }
     }
     h1 {
@@ -128,6 +130,9 @@ body::-webkit-scrollbar-thumb {
             transform: translateX(-100%); /* Image sort de l'écran à gauche */
         }
     }
+}
+.header__title {
+    padding-right: 0;
 }
 
 .section {
@@ -197,9 +202,10 @@ body::-webkit-scrollbar-thumb {
             display: none;
         }
     }
-    h3 {
+    h2 {
         color: $textBlack-color;
-        opacity: 1;
+        font-family: zigzag;
+        color: $textBlack-color;      
     }
 }
 
@@ -255,9 +261,12 @@ body::-webkit-scrollbar-thumb {
         font-family: zigzag;
         color: $textBlack-color;
     }
-    .titleAnim {
+    .game__title {
         color: $textWhite-color;
     }
+    // .titleAnim {
+    //     color: $textWhite-color;
+    // }
 
     &__right {
         flex: 1;
@@ -828,6 +837,9 @@ body::-webkit-scrollbar-thumb {
 @media screen and (min-width:768px){
     h3 {
         font-size: $h3-desktop;
+    }
+    h2 {
+        font-size: $h2-desktop;
     }
     p {
         font-size: $p-desktop;

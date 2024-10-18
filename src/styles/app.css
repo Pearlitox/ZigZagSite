@@ -39,7 +39,9 @@ body {
   color: #542B0E;
 }
 .index h2 {
-  font-family: "Pixelify Sans", sans-serif;
+  margin: 0%;
+  margin-bottom: 28px;
+  font-family: zigzag;
 }
 .index p {
   line-height: 1.6;
@@ -134,6 +136,10 @@ body::-webkit-scrollbar-thumb {
   }
 }
 
+.header__title {
+  padding-right: 0;
+}
+
 .section {
   scroll-snap-align: start;
   height: 100vh;
@@ -180,9 +186,10 @@ body::-webkit-scrollbar-thumb {
 .pourquoi__img--1 {
   display: none;
 }
-.pourquoi h3 {
+.pourquoi h2 {
   color: #542B0E;
-  opacity: 1;
+  font-family: zigzag;
+  color: #542B0E;
 }
 
 .whatis__container {
@@ -226,7 +233,7 @@ body::-webkit-scrollbar-thumb {
   font-family: zigzag;
   color: #542B0E;
 }
-.game .titleAnim {
+.game .game__title {
   color: #F1EFEF;
 }
 .game__right {
@@ -644,6 +651,9 @@ body::-webkit-scrollbar-thumb {
 @media screen and (min-width: 768px) {
   h3 {
     font-size: 36px;
+  }
+  h2 {
+    font-size: 54px;
   }
   p {
     font-size: 24px;

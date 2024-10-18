@@ -119,8 +119,7 @@ class TextScramble {
 
 const phrases = [
   "Mais d'abord...,",
-  "C'est quoi le TDAH ?"
-  
+  "C'est quoi le TDAH ?" 
 ];
 
 const el = document.querySelector('.whatis__text');
