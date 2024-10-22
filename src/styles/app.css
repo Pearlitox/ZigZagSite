@@ -88,11 +88,11 @@ body::-webkit-scrollbar-thumb {
   font-family: "Pixelify Sans", sans-serif;
   color: #F1EFEF;
   text-shadow: 0px 5px 0px #3351E3;
-  max-width: 40ch;
 }
 .header h1 {
   text-shadow: 0px 7px 0px #3351E3;
   color: #F1EFEF;
+  font-size: 100px;
 }
 .header__img {
   position: absolute;
@@ -590,6 +590,58 @@ body::-webkit-scrollbar-thumb {
   cursor: pointer;
 }
 
+.credits {
+  background-color: #DFC0AE;
+  max-width: 100vw;
+  overflow-x: hidden;
+  font-family: canada;
+  padding-left: 8px;
+}
+.credits .back {
+  display: flex;
+  width: 100vw;
+  margin-bottom: 84px;
+}
+.credits .back a {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  color: #542B0E;
+}
+.credits .back a:hover {
+  color: #85461A;
+  transition: 0.3s ease-in-out;
+}
+.credits .back i {
+  align-items: center;
+  display: flex;
+  margin-right: 15px;
+}
+.credits .back p {
+  margin: 0%;
+  display: flex;
+  align-items: center;
+}
+.credits__div {
+  margin-bottom: 128px;
+}
+.credits__div h2 {
+  margin: 0%;
+  margin-left: 0.5em;
+  font-size: 40px;
+}
+.credits__div ul {
+  list-style: none;
+  margin-left: 0.5em;
+  line-height: 1.6;
+  font-size: 18px;
+  text-indent: -1.5em;
+}
+.credits__div p {
+  margin-left: 0.5em;
+  font-size: 18px;
+}
+
 @media screen and (min-width: 489px) {
   .section {
     margin-bottom: 256px;
@@ -612,6 +664,13 @@ body::-webkit-scrollbar-thumb {
   .pourquoi__txt {
     max-width: 50ch;
     margin: auto;
+  }
+  .credits h2 {
+    font-size: 45px;
+  }
+  .credits p,
+  .credits ul {
+    font-size: 20px;
   }
 }
 @media screen and (min-width: 500px) {
@@ -688,6 +747,21 @@ body::-webkit-scrollbar-thumb {
     width: 300px;
     margin: auto 20px;
   }
+  .credits {
+    padding-left: 33px;
+  }
+  .credits h2,
+  .credits p,
+  .credits ul {
+    margin-left: 2rem;
+  }
+  .credits h2 {
+    font-size: 54px;
+  }
+  .credits p,
+  .credits ul {
+    font-size: 24px;
+  }
 }
 @media screen and (min-width: 789px) {
   .titleAnim {
@@ -715,7 +789,7 @@ body::-webkit-scrollbar-thumb {
 }
 @media screen and (min-width: 1000px) {
   .header h1 {
-    font-size: 300px;
+    font-size: 250px;
   }
   .header__title {
     text-align: center;
@@ -751,6 +825,11 @@ body::-webkit-scrollbar-thumb {
     right: 50%;
     transform: translateX(50%);
     opacity: 0.7;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .header h1 {
+    font-size: 300px;
   }
 }
 @media screen and (min-width: 1500px) {
