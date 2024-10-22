@@ -16,6 +16,10 @@
     color: $bg-color;
 }
 
+html {
+    overflow-x: hidden;
+}
+
 .index {
     background-color: $bg-color;
     margin: 0;
@@ -74,7 +78,7 @@ body::-webkit-scrollbar-thumb {
         z-index: 10;
 
         .header__title {
-            font-size: $h2-mobile;
+            font-size: $h3-mobile;
             font-family: "Pixelify Sans", sans-serif;
             color: $textWhite-color;
             text-shadow: 0px 5px 0px #3351E3; 
@@ -84,7 +88,7 @@ body::-webkit-scrollbar-thumb {
     h1 {
         text-shadow: 0px 7px 0px #3351E3; 
         color: $textWhite-color;
-        font-size: 100px;
+        font-size: $h1-mobile;
     }
     &__img {
         position: absolute;
