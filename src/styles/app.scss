@@ -69,7 +69,7 @@ body::-webkit-scrollbar-thumb {
     text-align: center;
     // background: linear-gradient(0deg, $fourth-color 20%, rgba(118, 84, 15, 0) 90%), repeating-linear-gradient(transparent, transparent 50px, $fourth-color 52px), repeating-linear-gradient(90deg, transparent, transparent 50px, $fourth-color 52px);
     background-attachment: fixed;
-    background-image: url('../assets/images/bg-header.png');
+    background-image: url('../assets/images/bg-header.webp');
     position: relative;
 
 
@@ -279,7 +279,7 @@ body::-webkit-scrollbar-thumb {
     align-items: flex-start;
     color: #fff;
     margin-bottom: $margin-3;
-    background-image: url('../assets/images/parquet.png');
+    background-image: url('../assets/images/parquet.webp');
     background-size: contain;
 
     &__img {

@@ -27,10 +27,9 @@ body {
   color: #DFC0AE;
 }
 
-html {
-  overflow-x: hidden;
-}
-
+/*html {
+    overflow-x: hidden;
+}*/
 .index {
   background-color: #DFC0AE;
   margin: 0;
@@ -78,9 +77,8 @@ body::-webkit-scrollbar-thumb {
   align-items: center;
   text-align: center;
   background-attachment: fixed;
-  background-image: url("../assets/images/bg-header.png");
+  background-image: url("../assets/images/bg-header.webp");
   position: relative;
-  overflow: hidden;
   /* Animation pour img--right */
 }
 .header__txt {
@@ -147,9 +145,6 @@ body::-webkit-scrollbar-thumb {
 .section {
   scroll-snap-align: start;
   height: 100vh;
-  padding-left: 10px;
-  padding-right: 10px;
-  margin-bottom: 84px;
   padding-top: 56px;
 }
 
@@ -164,12 +159,19 @@ body::-webkit-scrollbar-thumb {
   height: 100vh;
   position: relative;
 }
+.intro__imgs {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  background: linear-gradient(#DFC0AE 0% 40%, #542B0E 40% 100%);
+  z-index: -1;
+  bottom: 0;
+}
 .intro__img {
   margin-top: 30px;
-  position: absolute;
-  right: 0;
-  width: 300px;
-  justify-content: end;
+  width: 200px;
   background-size: cover;
 }
 
@@ -180,12 +182,15 @@ body::-webkit-scrollbar-thumb {
 .pourquoi__text {
   font-size: 18px;
 }
-.pourquoi__img {
+.pourquoi__imgs {
   position: absolute;
-  bottom: -150px;
-}
-.pourquoi__img--1 {
-  display: none;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  z-index: -1;
+  background: linear-gradient(#DFC0AE 0% 40%, #542B0E 40% 100%);
 }
 .pourquoi h2 {
   color: #542B0E;
@@ -205,16 +210,27 @@ body::-webkit-scrollbar-thumb {
   color: #542B0E;
   font-family: zigzag;
 }
-.whatis .dud {
-  color: #7E924A;
+.whatis__content {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 20%;
+}
+.whatis__imgs {
+  z-index: -1;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  background: linear-gradient(#DFC0AE 0% 40%, #542B0E 40% 100%);
 }
 .whatis__img {
   margin-top: 30px;
-  position: absolute;
-  left: 0;
   width: 300px;
-  justify-content: end;
   background-size: cover;
+  z-index: 10;
 }
 
 .game {
@@ -222,7 +238,7 @@ body::-webkit-scrollbar-thumb {
   align-items: flex-start;
   color: #fff;
   margin-bottom: 84px;
-  background-image: url("../assets/images/parquet.png");
+  background-image: url("../assets/images/parquet.webp");
   background-size: contain;
 }
 .game__img {
@@ -647,13 +663,6 @@ body::-webkit-scrollbar-thumb {
 }
 
 @media screen and (min-width: 489px) {
-  .section {
-    margin-bottom: 256px;
-  }
-  .intro {
-    height: auto;
-    margin-bottom: 256px;
-  }
   .intro__txt {
     max-width: 50ch;
     margin: auto;
@@ -771,9 +780,6 @@ body::-webkit-scrollbar-thumb {
   .titleAnim {
     font-size: 54px;
   }
-  .section {
-    margin-bottom: 304px;
-  }
   .members {
     height: 300vh;
   }
@@ -811,10 +817,8 @@ body::-webkit-scrollbar-thumb {
     position: relative;
   }
   .whatis__img {
-    position: absolute;
     bottom: 200px;
     opacity: 1;
-    z-index: -1;
     width: 500px;
   }
   .whatis p {

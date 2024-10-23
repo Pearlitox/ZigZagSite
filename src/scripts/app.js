@@ -13,7 +13,7 @@ if (siIndex) {
     letters.forEach((letter, i) => {
       let span = document.createElement("span");
       span.textContent = letter;
-      span.style.animationDelay = `${i * 0.02}s`;
+      span.style.animationDelay = `${i * 0.2}s`;
       glowInText.append(span);
     });
   });
