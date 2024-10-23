@@ -100,6 +100,21 @@ if (siIndex) {
     next();
   });
 
+  // ------ FACE A FACE ------ //
+  function adjustStickyPosition() {
+    var contentLeft = document.querySelector("#left-content");
+    var height = contentLeft.clientHeight;
+    var topOffset = "calc(50% - " + height / 2 + "px)";
+    contentLeft.style.top = topOffset;
+  }
+
+  function initialize() {
+    adjustStickyPosition();
+  }
+
+  window.onload = initialize;
+  window.onresize = initialize;
+
   // ------ ANIMATION DES CARTES ------ //
   document.querySelectorAll(".arrowFront").forEach((arrow) => {
     arrow.addEventListener("click", function () {

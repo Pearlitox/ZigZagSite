@@ -272,10 +272,6 @@ body::-webkit-scrollbar-thumb {
 
     &__left {
         flex: 1;
-        display: flex; // Add Flexbox
-        flex-direction: column; // Align items vertically in a column
-        justify-content: center; // Vertical centering
-        align-items: center; // Horizontal centering
         position: sticky;
         will-change: transform;
         text-align: center;

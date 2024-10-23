@@ -244,10 +244,6 @@ body::-webkit-scrollbar-thumb {
 }
 .game__left {
   flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   position: sticky;
   will-change: transform;
   text-align: center;
