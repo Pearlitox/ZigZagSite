@@ -5,7 +5,7 @@ if (siIndex) {
   //Anim des titres
   let glowInTexts = document.querySelectorAll(".titleAnim");
 
-  // on coupe la phrase en differents sapn
+  // on coupe la phrase en differents span
   glowInTexts.forEach((glowInText) => {
     let letters = glowInText.textContent.split("");
     glowInText.textContent = "";
