@@ -246,7 +246,6 @@ body::-webkit-scrollbar-thumb {
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
-        top: 20%;
     }
     //.dud {
     //    color: $third-color;
@@ -784,28 +783,38 @@ body::-webkit-scrollbar-thumb {
 
 
 @media screen and (min-width: 489px) {
+    header{
+        &__txt{
+            padding: 10px;
+        }
+    }
 
     .intro {
         //margin-bottom: $margint-4;
-        &__txt {
-            max-width: 50ch;
+        &__txt{
+            max-width: 70%;
             margin: auto;
+        }
+        &__img{
+            width: 200px;
         }
     }
 
     .whatis {
-        p {
-            max-width: 50ch;
+
+        &__txt{
+            max-width: 70%;
             margin: auto;
         }
+
         &__img {
-            width: 400px;
+            width: 200px;
         }
     }
 
     .pourquoi {
-        &__txt {
-            max-width: 50ch;
+        &__txt{
+            max-width: 70%;
             margin: auto;
         }
     }
