@@ -1,6 +1,5 @@
-@import 'utils/variables';
-@import 'components/type';
-
+@import "utils/variables";
+@import "components/type";
 
 @font-face {
     font-family: "zigzag";
@@ -69,7 +68,7 @@ body::-webkit-scrollbar-thumb {
     text-align: center;
     // background: linear-gradient(0deg, $fourth-color 20%, rgba(118, 84, 15, 0) 90%), repeating-linear-gradient(transparent, transparent 50px, $fourth-color 52px), repeating-linear-gradient(90deg, transparent, transparent 50px, $fourth-color 52px);
     background-attachment: fixed;
-    background-image: url('../assets/images/bg-header.png');
+    background-image: url("../assets/images/bg-header.png");
     position: relative;
     overflow: hidden;
 
@@ -81,12 +80,12 @@ body::-webkit-scrollbar-thumb {
             font-size: $h3-mobile;
             font-family: "Pixelify Sans", sans-serif;
             color: $textWhite-color;
-            text-shadow: 0px 5px 0px #3351E3; 
-            // max-width: 40ch;   
+            text-shadow: 0px 5px 0px #3351e3;
+            // max-width: 40ch;
         }
     }
     h1 {
-        text-shadow: 0px 7px 0px #3351E3; 
+        text-shadow: 0px 7px 0px #3351e3;
         color: $textWhite-color;
         font-size: $h1-mobile;
     }
@@ -125,11 +124,11 @@ body::-webkit-scrollbar-thumb {
             transform: translateX(-100%); /* Image sort de l'écran à gauche */
         }
     }
-    
+
     /* Animation pour img--right */
     @keyframes move-right {
         0% {
-            transform: translateX(100%); 
+            transform: translateX(100%);
         }
         100% {
             transform: translateX(-100%); /* Image sort de l'écran à gauche */
@@ -152,7 +151,7 @@ body::-webkit-scrollbar-thumb {
 .titleAnim {
     color: $textBlack-color;
     text-align: center;
-    
+
     // span {
     //   animation: glow-in .5s both;
     // }
@@ -187,7 +186,7 @@ body::-webkit-scrollbar-thumb {
 //     }
 //     to { opacity: 0.7; }
 // }
-  
+
 .pourquoi {
     position: relative;
     height: 100vh;
@@ -210,10 +209,9 @@ body::-webkit-scrollbar-thumb {
     h2 {
         color: $textBlack-color;
         font-family: zigzag;
-        color: $textBlack-color;      
+        color: $textBlack-color;
     }
 }
-
 
 .whatis {
     &__container {
@@ -243,15 +241,15 @@ body::-webkit-scrollbar-thumb {
     }
 }
 
-
-
-
 .game {
+    overflow: auto;
+    height: 100vh;
+
     display: flex;
     align-items: flex-start;
     color: #fff;
     margin-bottom: $margin-3;
-    background-image: url('../assets/images/parquet.png');
+    background-image: url("../assets/images/parquet.png");
     background-size: contain;
 
     &__img {
@@ -259,7 +257,6 @@ body::-webkit-scrollbar-thumb {
         border: 10px solid $textBlack-color;
         border-radius: 20px;
         // clip-path: polygon(0 10px,10px 10px,10px 0,calc(100% - 10px) 0,calc(100% - 10px) 10px,100% 10px,100% calc(100% - 10px),calc(100% - 10px) calc(100% - 10px),calc(100% - 10px) 100%,10px 100%,10px calc(100% - 10px),0 calc(100% - 10px));
-
     }
 
     h2 {
@@ -297,18 +294,13 @@ body::-webkit-scrollbar-thumb {
         border: 10px solid $textBlack-color;
         background-color: $bg-color;
         // clip-path: polygon(0 10px,10px 10px,10px 0,calc(100% - 10px) 0,calc(100% - 10px) 10px,100% 10px,100% calc(100% - 10px),calc(100% - 10px) calc(100% - 10px),calc(100% - 10px) 100%,10px 100%,10px calc(100% - 10px),0 calc(100% - 10px));
-
     }
-    
 }
-
-
-
 
 .members {
     height: 450vh;
 
-    &__container{
+    &__container {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-evenly;
@@ -316,11 +308,11 @@ body::-webkit-scrollbar-thumb {
         height: 100vh;
     }
     &__content {
-        &--front{
+        &--front {
             background: #292929;
         }
 
-        .cf-inner .members__inner{
+        .cf-inner .members__inner {
             align-items: stretch;
             transform-style: preserve-3d;
             perspective: 1000px;
@@ -337,16 +329,17 @@ body::-webkit-scrollbar-thumb {
             }
         }
 
-        &--iner{
+        &--iner {
             width: 30%;
             color: #fff;
             position: relative;
             transform-style: preserve-3d;
             perspective: 1000px;
             backface-visibility: hidden;
-            transition: .9s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-    
-            .members__content--front, .members__content--back{
+            transition: 0.9s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+            .members__content--front,
+            .members__content--back {
                 position: relative;
                 transform-style: preserve-3d;
                 perspective: 1000px;
@@ -355,19 +348,32 @@ body::-webkit-scrollbar-thumb {
                 max-height: 500px;
                 display: flex;
                 justify-content: center;
-                align-items: center; 
-                border: 10px solid $textWhite-color;              
-                clip-path: polygon(0 10px,10px 10px,10px 0,calc(100% - 10px) 0,calc(100% - 10px) 10px,100% 10px,100% calc(100% - 10px),calc(100% - 10px) calc(100% - 10px),calc(100% - 10px) 100%,10px 100%,10px calc(100% - 10px),0 calc(100% - 10px));
+                align-items: center;
+                border: 10px solid $textWhite-color;
+                clip-path: polygon(
+                    0 10px,
+                    10px 10px,
+                    10px 0,
+                    calc(100% - 10px) 0,
+                    calc(100% - 10px) 10px,
+                    100% 10px,
+                    100% calc(100% - 10px),
+                    calc(100% - 10px) calc(100% - 10px),
+                    calc(100% - 10px) 100%,
+                    10px 100%,
+                    10px calc(100% - 10px),
+                    0 calc(100% - 10px)
+                );
             }
 
-            .cf-inner{
+            .cf-inner {
                 transform-style: preserve-3d;
                 backface-visibility: hidden;
                 width: 100%;
                 padding: 150px 30px;
 
                 &:before,
-                &:after{
+                &:after {
                     content: "";
                     position: absolute;
                     width: 50px;
@@ -384,7 +390,6 @@ body::-webkit-scrollbar-thumb {
         }
     }
 
-    
     .serv-num {
         width: 50px !important;
         height: 50px !important;
@@ -409,7 +414,7 @@ body::-webkit-scrollbar-thumb {
             }
         }
     }
-    
+
     .flipFront {
         transform: rotateY(-180deg);
     }
@@ -419,7 +424,6 @@ body::-webkit-scrollbar-thumb {
     }
 
     &__icon {
-    
         .social {
             text-align: center;
             // justify-content: center;
@@ -430,7 +434,6 @@ body::-webkit-scrollbar-thumb {
             z-index: 10;
             justify-content: center;
             margin-left: -30px;
-
 
             &__amandine {
                 width: 100%;
@@ -445,29 +448,28 @@ body::-webkit-scrollbar-thumb {
                 width: 2rem;
                 height: 2rem;
                 background: transparent;
-                border: .2rem solid $textWhite-color;
+                border: 0.2rem solid $textWhite-color;
                 border-radius: 50%;
-                box-shadow: 0 .2rem .5rem $textWhite-color;
+                box-shadow: 0 0.2rem 0.5rem $textWhite-color;
                 font-size: $p-mobile;
                 color: $textWhite-color;
-                margin: 2.5rem .75rem 3rem;
-                transition: .5s ease;
+                margin: 2.5rem 0.75rem 3rem;
+                transition: 0.5s ease;
                 text-decoration: none;
 
                 &:hover {
                     background: transparent;
                     color: $bg-color;
                     border-color: $bg-color;
-                    transform:scale(1.1);
-                    box-shadow: 0 .2rem .5rem $bg-color;
-
+                    transform: scale(1.1);
+                    box-shadow: 0 0.2rem 0.5rem $bg-color;
                 }
-            }   
+            }
         }
     }
 
-    &__bg{
-        background-image: url('../assets/images/members/julie.png');
+    &__bg {
+        background-image: url("../assets/images/members/julie.png");
         position: absolute;
         top: 0;
         left: 0;
@@ -478,19 +480,19 @@ body::-webkit-scrollbar-thumb {
         background-size: cover;
 
         &--amandine {
-            background-image: url('../assets/images/members/amandine.png');
+            background-image: url("../assets/images/members/amandine.png");
         }
         &--gabriel {
-            background-image: url('../assets/images/members/gabriel.png');
+            background-image: url("../assets/images/members/gabriel.png");
         }
         &--pearl {
-            background-image: url('../assets/images/members/pearl.png');
+            background-image: url("../assets/images/members/pearl.png");
         }
         &--guillaume {
-            background-image: url('../assets/images/members/guillaume.png');
+            background-image: url("../assets/images/members/guillaume.png");
         }
     }
-    &__overlay{
+    &__overlay {
         position: absolute;
         top: 0;
         left: 0;
@@ -507,14 +509,12 @@ body::-webkit-scrollbar-thumb {
     }
 }
 
-
-.members__content--iner > *{
-    transition: .9s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+.members__content--iner > * {
+    transition: 0.9s cubic-bezier(0.68, -0.55, 0.265, 1.55);
     margin: $margin-2 auto;
 }
 
-
-.members__content--iner .cf-inner .members__inner{
+.members__content--iner .cf-inner .members__inner {
     align-items: stretch;
     transform-style: preserve-3d;
     perspective: 1000px;
@@ -527,8 +527,7 @@ body::-webkit-scrollbar-thumb {
     font-family: canada;
 }
 
-
-.members__content--iner .cf-inner .members__inner h2{
+.members__content--iner .cf-inner .members__inner h2 {
     position: relative;
     font-size: 22px;
     font-weight: 800;
@@ -536,7 +535,7 @@ body::-webkit-scrollbar-thumb {
     color: $textWhite-color;
 }
 
-.members__content--iner .cf-inner .members__inner h2:after{
+.members__content--iner .cf-inner .members__inner h2:after {
     content: "";
     position: absolute;
     top: -30px;
@@ -547,7 +546,7 @@ body::-webkit-scrollbar-thumb {
     background: $bg-color;
 }
 
-.members__content--iner .cf-inner .members__inner h4{
+.members__content--iner .cf-inner .members__inner h4 {
     display: inline-block;
     color: $textWhite-color;
     text-transform: uppercase;
@@ -570,8 +569,7 @@ body::-webkit-scrollbar-thumb {
     cursor: pointer;
 }
 
-
-.members__content--iner .members__content--back{
+.members__content--iner .members__content--back {
     position: absolute;
     left: 0;
     top: 0;
@@ -583,9 +581,7 @@ body::-webkit-scrollbar-thumb {
     background: $text-color;
 }
 
-
-
-.members__content--back i{
+.members__content--back i {
     font-size: 54px;
     position: relative;
 }
@@ -594,7 +590,7 @@ body::-webkit-scrollbar-thumb {
     padding-bottom: 0px;
 }
 
-.members__content--back:after{
+.members__content--back:after {
     color: $bg-color;
     position: absolute;
     content: "\25CF\25CF\25CF";
@@ -641,9 +637,7 @@ body::-webkit-scrollbar-thumb {
     }
 }
 
-
-
-.members__content--iner .cf-inner .members__inner p{
+.members__content--iner .cf-inner .members__inner p {
     color: $textWhite-color;
     font-size: $p-mobile;
     line-height: 1.6;
@@ -654,10 +648,6 @@ body::-webkit-scrollbar-thumb {
 .members__content--back p {
     text-align: left;
 }
-
-
-
-
 
 .footer {
     background-color: $text-color;
@@ -684,7 +674,7 @@ body::-webkit-scrollbar-thumb {
         font-size: $p-mobile;
 
         &:hover {
-            transition: .2s ease-out;
+            transition: 0.2s ease-out;
             color: $bg-color;
         }
     }
@@ -693,7 +683,6 @@ body::-webkit-scrollbar-thumb {
         cursor: pointer;
     }
 }
-
 
 .credits {
     background-color: $bg-color;
@@ -706,7 +695,7 @@ body::-webkit-scrollbar-thumb {
         display: flex;
         width: 100vw;
         margin-bottom: $margin-3;
-    
+
         a {
             text-decoration: none;
             display: flex;
@@ -735,25 +724,22 @@ body::-webkit-scrollbar-thumb {
 
         h2 {
             margin: 0%;
-        margin-left: 0.5em;
-        font-size: $h2-mobile;
+            margin-left: 0.5em;
+            font-size: $h2-mobile;
         }
         ul {
-        list-style: none;
-        margin-left: 0.5em;
-        line-height: 1.6;
-        font-size: $p-mobile;
-        text-indent: -1.5em;
+            list-style: none;
+            margin-left: 0.5em;
+            line-height: 1.6;
+            font-size: $p-mobile;
+            text-indent: -1.5em;
         }
         p {
-        margin-left: 0.5em;
-        font-size: $p-mobile;
+            margin-left: 0.5em;
+            font-size: $p-mobile;
         }
     }
 }
-
-
-
 
 @media screen and (min-width: 489px) {
     .section {
@@ -786,16 +772,16 @@ body::-webkit-scrollbar-thumb {
     }
     .credits {
         h2 {
-        font-size: $h2-tablet;
+            font-size: $h2-tablet;
         }
         p,
         ul {
-        font-size: $p-tablet;
+            font-size: $p-tablet;
         }
     }
 }
 
-@media screen and (min-width: 500px ) {
+@media screen and (min-width: 500px) {
     // .game {
     //     &__right {
     //         margin: auto;
@@ -820,28 +806,28 @@ body::-webkit-scrollbar-thumb {
         flex-direction: column;
         align-items: center;
 
-        &__left, 
+        &__left,
         &__right {
             padding: 20px;
             // width: 100%;
         }
         &__left {
-        position: static;
-        margin-top: 20px;
-        margin-bottom: 20px;
+            position: static;
+            margin-top: 20px;
+            margin-bottom: 20px;
         }
         &__right {
             margin: auto;
         }
-    } 
+    }
 }
 
-@media screen and (max-width:768px){
-    .members__content--iner{
-        width:80%;
-    } 
+@media screen and (max-width: 768px) {
+    .members__content--iner {
+        width: 80%;
+    }
 }
-@media screen and (min-width:768px){
+@media screen and (min-width: 768px) {
     h3 {
         font-size: $h3-desktop;
     }
@@ -896,34 +882,34 @@ body::-webkit-scrollbar-thumb {
                 margin: auto 20px;
             }
         }
-    } 
+    }
     .credits {
         padding-left: 33px;
         h2,
         p,
         ul {
-        margin-left: 2rem;
+            margin-left: 2rem;
         }
         h2 {
-        font-size: $h2-desktop;
+            font-size: $h2-desktop;
         }
         p,
         ul {
-        font-size: $p-desktop;
+            font-size: $p-desktop;
         }
     }
 }
 
-@media screen and (min-width:789px){
+@media screen and (min-width: 789px) {
     .titleAnim {
         font-size: $h2-desktop;
     }
     .section {
         margin-bottom: $margind-4;
     }
-    .members{
+    .members {
         height: 300vh;
-    } 
+    }
     .header {
         &__img {
             &--topleft {
@@ -945,7 +931,7 @@ body::-webkit-scrollbar-thumb {
     }
 }
 
-@media screen and (min-width:1000px){
+@media screen and (min-width: 1000px) {
     .header {
         h1 {
             font-size: 250px;
@@ -960,11 +946,11 @@ body::-webkit-scrollbar-thumb {
             width: 500px;
         }
     }
-    .members{
+    .members {
         height: auto;
         height: 100vh;
         margin-bottom: 0;
-    } 
+    }
     .whatis {
         position: relative;
         &__img {
@@ -991,7 +977,7 @@ body::-webkit-scrollbar-thumb {
         }
     }
 }
-@media screen and (min-width:1200px){
+@media screen and (min-width: 1200px) {
     .header {
         h1 {
             font-size: 300px;
@@ -999,7 +985,7 @@ body::-webkit-scrollbar-thumb {
     }
 }
 
-@media screen and (min-width:1500px){
+@media screen and (min-width: 1500px) {
     // .pourquoi {
     //     &__img {
     //         &--1 {
