@@ -1,29 +1,27 @@
 "use strict";
 
 var siIndex = document.querySelector(".index");
-if (siIndex) {
-  //Anim des titres
-  let glowInTexts = document.querySelectorAll(".titleAnim");
 
-  // on coupe la phrase en differents span
+if (siIndex) {
+  // ------ ANIMATION DES TITRES ------ //
+  const glowInTexts = document.querySelectorAll(".titleAnim");
+
   glowInTexts.forEach((glowInText) => {
-    let letters = glowInText.textContent.split("");
-    glowInText.textContent = "";
-    letters.forEach((letter, i) => {
-      let span = document.createElement("span");
+    const letters = [...glowInText.textContent].map((letter, i) => {
+      const span = document.createElement("span");
       span.textContent = letter;
       span.style.animationDelay = `${i * 0.02}s`;
-      glowInText.append(span);
+      return span;
     });
+    glowInText.innerHTML = ""; // clear text
+    glowInText.append(...letters); // ajout spans
   });
 
-  //Rewrite
-
+  // Scramble
   class TextScramble {
     constructor(el) {
       this.el = el;
       this.chars = "!<>-_\\/[]{}—=+*^?#________";
-      this.update = this.update.bind(this);
     }
 
     setText(newText) {
@@ -46,13 +44,11 @@ if (siIndex) {
       return promise;
     }
 
-    update() {
+    update = () => {
       let output = "";
       let complete = 0;
 
-      for (let i = 0, n = this.queue.length; i < n; i++) {
-        let { from, to, start, end, char } = this.queue[i];
-
+      this.queue.forEach(({ from, to, start, end, char }, i) => {
         if (this.frame >= end) {
           complete++;
           output += to;
@@ -65,7 +61,7 @@ if (siIndex) {
         } else {
           output += from;
         }
-      }
+      });
 
       this.el.innerHTML = output;
       if (complete === this.queue.length) {
@@ -74,26 +70,24 @@ if (siIndex) {
         this.frameRequest = requestAnimationFrame(this.update);
         this.frame++;
       }
-    }
+    };
 
     randomChar() {
       return this.chars[Math.floor(Math.random() * this.chars.length)];
     }
   }
 
-  // Liste de phrases spécifiques à dire (1 et 2)
+  // Listes de phrases
   const phrasesList = [
     ["Introduction", "Le TDAH"],
     ["Mais d'abord...", "C'est quoi le TDAH ?"],
     ["Origine du projet", "Nos recherches"],
   ];
 
-  // Sélectionne les éléments à animer
-  const elements = document.querySelectorAll(".titleAnim");
-
-  elements.forEach((el, index) => {
+  // Animation
+  document.querySelectorAll(".titleAnim").forEach((el, index) => {
     const fx = new TextScramble(el);
-    const phrases = phrasesList[index]; // Utilise les phrases dans la const
+    const phrases = phrasesList[index];
 
     let counter = 0;
     const next = () => {
@@ -106,40 +100,20 @@ if (siIndex) {
     next();
   });
 
-  // face à face
-
-  function adjustStickyPosition() {
-    var contentLeft = document.querySelector("#left-content");
-    var height = contentLeft.clientHeight;
-    var topOffset = "calc(50% - " + height / 2 + "px)";
-    contentLeft.style.top = topOffset;
-  }
-
-  function initialize() {
-    adjustStickyPosition();
-  }
-
-  window.onload = initialize;
-  window.onresize = initialize;
-
-  var arrowFronts = document.querySelectorAll(".arrowFront");
-  var arrowBacks = document.querySelectorAll(".arrowBack");
-
-  arrowFronts.forEach(function (arrow) {
+  // ------ ANIMATION DES CARTES ------ //
+  document.querySelectorAll(".arrowFront").forEach((arrow) => {
     arrow.addEventListener("click", function () {
-      var lesmembres = this.closest(".members__content--iner");
-
-      lesmembres.classList.remove("flipBack");
-      lesmembres.classList.add("flipFront");
+      const member = this.closest(".members__content--iner");
+      member.classList.remove("flipBack");
+      member.classList.add("flipFront");
     });
   });
 
-  arrowBacks.forEach(function (arrow) {
+  document.querySelectorAll(".arrowBack").forEach((arrow) => {
     arrow.addEventListener("click", function () {
-      var lesmembresback = this.closest(".members__content--iner");
-
-      lesmembresback.classList.remove("flipFront");
-      lesmembresback.classList.add("flipBack");
+      const memberBack = this.closest(".members__content--iner");
+      memberBack.classList.remove("flipFront");
+      memberBack.classList.add("flipBack");
     });
   });
-} //fin siIndex
+}

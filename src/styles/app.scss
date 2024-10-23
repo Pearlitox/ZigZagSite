@@ -253,34 +253,36 @@ body::-webkit-scrollbar-thumb {
         width: 300px;
         border: 10px solid $textBlack-color;
         border-radius: 20px;
-        // clip-path: polygon(0 10px,10px 10px,10px 0,calc(100% - 10px) 0,calc(100% - 10px) 10px,100% 10px,100% calc(100% - 10px),calc(100% - 10px) calc(100% - 10px),calc(100% - 10px) 100%,10px 100%,10px calc(100% - 10px),0 calc(100% - 10px));
     }
 
     h2 {
         font-family: zigzag;
         color: $textBlack-color;
     }
+
     .game__title {
         color: $textWhite-color;
     }
-    // .titleAnim {
-    //     color: $textWhite-color;
-    // }
 
     &__right {
         flex: 1;
         padding: 100px;
         box-sizing: border-box;
     }
+
     &__left {
         flex: 1;
+        display: flex; // Add Flexbox
+        flex-direction: column; // Align items vertically in a column
+        justify-content: center; // Vertical centering
+        align-items: center; // Horizontal centering
         position: sticky;
         will-change: transform;
         text-align: center;
         box-sizing: border-box;
-        margin-top: 100px;
-        margin-bottom: 100px;
+        margin: 100px 0;
     }
+
     &__box--right {
         border-radius: 20px;
         margin-bottom: 30px;
@@ -290,7 +292,6 @@ body::-webkit-scrollbar-thumb {
         max-width: 50ch;
         border: 10px solid $textBlack-color;
         background-color: $bg-color;
-        // clip-path: polygon(0 10px,10px 10px,10px 0,calc(100% - 10px) 0,calc(100% - 10px) 10px,100% 10px,100% calc(100% - 10px),calc(100% - 10px) calc(100% - 10px),calc(100% - 10px) 100%,10px 100%,10px calc(100% - 10px),0 calc(100% - 10px));
     }
 }
 
