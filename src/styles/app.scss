@@ -16,9 +16,9 @@
     color: $bg-color;
 }
 
-html {
+/*html {
     overflow-x: hidden;
-}
+}*/
 
 .index {
     background-color: $bg-color;
@@ -71,7 +71,7 @@ body::-webkit-scrollbar-thumb {
     background-attachment: fixed;
     background-image: url('../assets/images/bg-header.png');
     position: relative;
-    overflow: hidden;
+
 
     &__txt {
         padding: 15px;
@@ -143,9 +143,7 @@ body::-webkit-scrollbar-thumb {
 .section {
     scroll-snap-align: start;
     height: 100vh;
-    padding-left: 10px;
-    padding-right: 10px;
-    margin-bottom: $margin-3;
+    //margin-bottom: $margin-3;
     padding-top: $margin-2;
 }
 
@@ -164,14 +162,23 @@ body::-webkit-scrollbar-thumb {
     height: 100vh;
     position: relative;
     //background-color: black;
+    &__imgs{
+
+        position: absolute;
+        width: 100%;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        background: linear-gradient(#DFC0AE 0% 40%, #542B0E 40% 100%);
+        z-index: -1;
+        bottom: 0;
+    }
 
     &__img {
         margin-top: 30px;
-        position: absolute;
-        right: 0;
+
         // background-image: url('../assets/images/brainCrop.png');
-        width: 300px;
-        justify-content: end;
+        width: 200px;
         background-size: cover;
     }
 }
@@ -199,14 +206,17 @@ body::-webkit-scrollbar-thumb {
     //     transition: opacity 0.3s ease; /* Pour un léger effet de transition */
     //     color: $textBlack-color;
     // }
-    &__img {
+    &__imgs{
         position: absolute;
-        bottom: -150px;
-
-        &--1 {
-            display: none;
-        }
+        bottom: 0;
+        width: 100%;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        z-index: -1;
+        background: linear-gradient(#DFC0AE 0% 40%, #542B0E 40% 100%);
     }
+
     h2 {
         color: $textBlack-color;
         font-family: zigzag;
@@ -216,11 +226,13 @@ body::-webkit-scrollbar-thumb {
 
 
 .whatis {
+
     &__container {
         width: 100%;
         justify-content: center;
         display: flex;
         font-family: "Pixelify Sans", sans-serif;
+
     }
 
     &__text {
@@ -228,18 +240,34 @@ body::-webkit-scrollbar-thumb {
         font-size: 28px;
         color: $textBlack-color;
         font-family: zigzag;
+    
     }
-    .dud {
-        color: $third-color;
+    &__content{
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 20%;
+    }
+    //.dud {
+    //    color: $third-color;
+    //}
+    &__imgs{
+        z-index: -1;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        background: linear-gradient(#DFC0AE 0% 40%, #542B0E 40% 100%);
     }
     &__img {
         margin-top: 30px;
-        position: absolute;
-        left: 0;
+
         // background-image: url('../assets/images/brainCrop.png');
         width: 300px;
-        justify-content: end;
         background-size: cover;
+        z-index: 10;
     }
 }
 
@@ -756,12 +784,9 @@ body::-webkit-scrollbar-thumb {
 
 
 @media screen and (min-width: 489px) {
-    .section {
-        margin-bottom: $margint-4;
-    }
+
     .intro {
-        height: auto;
-        margin-bottom: $margint-4;
+        //margin-bottom: $margint-4;
         &__txt {
             max-width: 50ch;
             margin: auto;
@@ -918,9 +943,7 @@ body::-webkit-scrollbar-thumb {
     .titleAnim {
         font-size: $h2-desktop;
     }
-    .section {
-        margin-bottom: $margind-4;
-    }
+
     .members{
         height: 300vh;
     } 
@@ -968,10 +991,8 @@ body::-webkit-scrollbar-thumb {
     .whatis {
         position: relative;
         &__img {
-            position: absolute;
             bottom: 200px;
             opacity: 1;
-            z-index: -1;
             width: 500px;
         }
         p {
