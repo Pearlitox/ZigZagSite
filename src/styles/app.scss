@@ -346,13 +346,20 @@ body::-webkit-scrollbar-thumb {
     &__content {
         &--front{
             background: #292929;
+            will-change: transform;
+        }
+        &--back {
+            will-change: transform;
         }
 
         .cf-inner .members__inner{
             align-items: stretch;
             transform-style: preserve-3d;
+            -webkit-transform-style: preserve-3d;
             perspective: 1000px;
+            -webkit-perspective: 1000px;
             backface-visibility: hidden;
+            -webkit-backface-visibility: hidden;
             transform: translateZ(95px) scale(0.81);
             text-align: center;
             position: relative;
@@ -370,15 +377,20 @@ body::-webkit-scrollbar-thumb {
             color: #fff;
             position: relative;
             transform-style: preserve-3d;
+            -webkit-transform-style: preserve-3d;
             perspective: 1000px;
+            -webkit-perspective: 1000px;
             backface-visibility: hidden;
+            -webkit-backface-visibility: hidden;
             transition: .9s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            -webkit-transition: transform 0.9s cubic-bezier(0.68, -0.55, 0.265, 1.55);
     
             .members__content--front, .members__content--back{
                 position: relative;
                 transform-style: preserve-3d;
                 perspective: 1000px;
                 backface-visibility: hidden;
+                -webkit-backface-visibility: hidden;
                 height: 100%;
                 max-height: 500px;
                 display: flex;
@@ -391,6 +403,7 @@ body::-webkit-scrollbar-thumb {
             .cf-inner{
                 transform-style: preserve-3d;
                 backface-visibility: hidden;
+                -webkit-backface-visibility: hidden;
                 width: 100%;
                 padding: 150px 30px;
 
@@ -440,11 +453,15 @@ body::-webkit-scrollbar-thumb {
     
     .flipFront {
         transform: rotateY(-180deg);
+        -webkit-transform: rotateY(-180deg);
     }
 
     .flipBack {
         transform: rotateY(0deg);
+        -webkit-transform: rotateY(0deg);
     }
+      
+
 
     &__icon {
     
