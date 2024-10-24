@@ -28,6 +28,7 @@ body {
 }
 
 .index {
+  cursor: none;
   background-color: #DFC0AE;
   margin: 0;
   scroll-snap-type: y mandatory;
@@ -51,6 +52,29 @@ body {
   margin: 0%;
   margin-bottom: 28px;
   font-family: zigzag;
+}
+.index .cursor-dot,
+.index .cursor-dot-outline {
+  pointer-events: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+.index .cursor-dot {
+  width: 8px;
+  height: 8px;
+  background-color: #542B0E;
+  transition: background-color 0.3s ease-in-out;
+}
+.index .cursor-dot-outline {
+  width: 40px;
+  height: 40px;
+  background-color: rgba(84, 43, 14, 0.5);
+  transition: background-color 0.3s ease-in-out;
 }
 
 body::-webkit-scrollbar {
@@ -76,6 +100,7 @@ body::-webkit-scrollbar-thumb {
   background-attachment: fixed;
   background-image: url("../assets/images/bg-header.webp");
   position: relative;
+  cursor: auto;
   /* Animation pour img--right */
 }
 .header__txt {
@@ -140,7 +165,6 @@ body::-webkit-scrollbar-thumb {
 }
 
 .section {
-  scroll-snap-align: start;
   height: 100vh;
   padding-top: 56px;
 }
@@ -276,6 +300,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .members {
+  padding-top: 56px;
   margin-top: 10rem;
   display: flex;
   justify-content: center;
@@ -409,7 +434,7 @@ body::-webkit-scrollbar-thumb {
   background: transparent;
   color: #DFC0AE;
   border-color: #DFC0AE;
-  transform: scale(1.1);
+  transform: scale(1.4);
   box-shadow: 0 0.2rem 0.5rem #DFC0AE;
 }
 
@@ -594,6 +619,9 @@ body::-webkit-scrollbar-thumb {
     top: -150px;
     right: 50%;
     transform: translateX(50%);
+  }
+  .members {
+    padding-top: 152px;
   }
   .members__front::before, .members__back::before {
     height: 700px;

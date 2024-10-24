@@ -17,7 +17,9 @@
 }
 
 
+
 .index {
+    cursor: none;
     background-color: $bg-color;
     margin: 0;
     scroll-snap-type: y mandatory;
@@ -41,6 +43,36 @@
         margin: 0%;
         margin-bottom: $margin-1;
         font-family: zigzag;
+    }
+
+
+    .cursor-dot,
+    .cursor-dot-outline {
+        pointer-events: none;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        border-radius: 50%;
+        opacity: 0;
+        transform: translate(-50%, -50%);
+        transition: opacity 0.3s ease-in-out,
+                    transform 0.3s ease-in-out;
+    }
+
+    .cursor-dot {
+        $size: 8px;
+        width: $size;
+        height: $size;
+        background-color: $textBlack-color;  // Couleur par défaut
+        transition: background-color 0.3s ease-in-out;  // Ajoute la transition de couleur
+    }
+
+    .cursor-dot-outline {
+        $size: 40px;
+        width: $size;
+        height: $size;
+        background-color: rgba($textBlack-color, 0.5);  // Couleur par défaut
+        transition: background-color 0.3s ease-in-out;  // Transition aussi pour le contour
     }
 }
 
@@ -68,6 +100,7 @@ body::-webkit-scrollbar-thumb {
     background-attachment: fixed;
     background-image: url('../assets/images/bg-header.webp');
     position: relative;
+    cursor: auto;
 
 
     &__txt {
@@ -138,7 +171,6 @@ body::-webkit-scrollbar-thumb {
 }
 
 .section {
-    scroll-snap-align: start;
     height: 100vh;
     //margin-bottom: $margin-3;
     padding-top: $margin-2;
@@ -331,6 +363,7 @@ body::-webkit-scrollbar-thumb {
 
 
 .members {
+    padding-top: $margin-2;
     margin-top: 10rem;
     display: flex;
     justify-content: center;
@@ -502,7 +535,7 @@ body::-webkit-scrollbar-thumb {
                     background: transparent;
                     color: $bg-color;
                     border-color: $bg-color;
-                    transform:scale(1.1);
+                    transform:scale(1.4);
                     box-shadow: 0 .2rem .5rem $bg-color;
 
                 }
@@ -749,6 +782,7 @@ body::-webkit-scrollbar-thumb {
         }
     }
     .members {
+        padding-top: $margind-3;
         &__front::before, &__back::before {
             height: 700px;
             width: 550px;
