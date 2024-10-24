@@ -27,9 +27,6 @@ body {
   color: #DFC0AE;
 }
 
-/*html {
-    overflow-x: hidden;
-}*/
 .index {
   background-color: #DFC0AE;
   margin: 0;
@@ -557,6 +554,12 @@ body::-webkit-scrollbar-thumb {
   }
 }
 @media screen and (min-width: 768px) {
+  html {
+    scroll-snap-type: y mandatory;
+  }
+  .scroll {
+    scroll-snap-align: start;
+  }
   h3 {
     font-size: 36px;
   }

@@ -16,9 +16,6 @@
     color: $bg-color;
 }
 
-/*html {
-    overflow-x: hidden;
-}*/
 
 .index {
     background-color: $bg-color;
@@ -699,6 +696,13 @@ body::-webkit-scrollbar-thumb {
 }
 
 @media screen and (min-width:768px){
+    html {
+        // overflow-x: hidden;
+        scroll-snap-type: y mandatory;
+    }
+    .scroll {
+        scroll-snap-align: start;
+    }
     h3 {
         font-size: $h3-desktop;
     }
