@@ -195,12 +195,25 @@ body::-webkit-scrollbar-thumb {
   width: 200px;
   background-size: cover;
 }
+.intro__txt {
+  padding-left: 15px;
+  padding-right: 15px;
+}
 
 .pourquoi {
   position: relative;
   height: 100vh;
 }
-.pourquoi__text {
+.pourquoi__content {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 20%;
+  width: 95%;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+.pourquoi__txt {
   font-size: 18px;
 }
 .pourquoi__imgs {
@@ -219,6 +232,9 @@ body::-webkit-scrollbar-thumb {
   color: #542B0E;
 }
 
+.whatis {
+  position: relative;
+}
 .whatis__container {
   width: 100%;
   justify-content: center;
@@ -236,6 +252,7 @@ body::-webkit-scrollbar-thumb {
   left: 50%;
   transform: translateX(-50%);
   top: 20%;
+  width: 100%;
 }
 .whatis__imgs {
   z-index: -1;
@@ -252,6 +269,10 @@ body::-webkit-scrollbar-thumb {
   width: 300px;
   background-size: cover;
   z-index: 10;
+}
+.whatis__p {
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .game {
@@ -605,14 +626,16 @@ body::-webkit-scrollbar-thumb {
   .whatis__text {
     font-size: 36px;
   }
+  .pourquoi__txt {
+    font-size: 24px;
+  }
   .pourquoi__txt span {
     font-size: 24px;
   }
   .pourquoi__img {
     display: none;
     bottom: -320px;
-  }
-  .pourquoi__img--1 {
+    width: 300px;
     display: block;
     position: absolute;
     width: 300px;
@@ -711,6 +734,9 @@ body::-webkit-scrollbar-thumb {
   }
 }
 @media screen and (min-width: 1200px) {
+  .header {
+    background-size: cover;
+  }
   .header h1 {
     font-size: 300px;
   }
