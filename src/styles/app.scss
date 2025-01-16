@@ -2,12 +2,19 @@
 @import "components/type";
 
 @font-face {
+    font-display: swap;
     font-family: "zigzag";
-    src: url("../assets/font/INVASION2000.TTF") format('truetype');
+    font-style: normal;
+    font-weight: 400;
+    src: url("../assets/font/INVASION2000.woff2") format("woff2");
 }
+
 @font-face {
+    font-display: swap;
     font-family: "canada";
-    src: url("../assets/font/RadioCanadaBig-Regular.ttf")format('truetype');
+    font-style: normal;
+    font-weight: 400;
+    src: url("../assets/font/radio-canada-big-v1-latin-regular.woff2") format("woff2");
 }
 
 ::selection {
