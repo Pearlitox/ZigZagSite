@@ -111,10 +111,10 @@ body::-webkit-scrollbar-thumb {
   font-size: 27px;
   font-family: "Pixelify Sans", sans-serif;
   color: #F1EFEF;
-  text-shadow: 0px 5px 0px #3351E3;
+  text-shadow: 0px 5px 0px #3351e3;
 }
 .header h1 {
-  text-shadow: 0px 7px 0px #3351E3;
+  text-shadow: 0px 7px 0px #3351e3;
   color: #F1EFEF;
   font-size: 80px;
 }
@@ -186,7 +186,7 @@ body::-webkit-scrollbar-thumb {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
-  background: linear-gradient(#DFC0AE 0% 40%, #542B0E 40% 100%);
+  background: linear-gradient(#dfc0ae 0% 40%, #542b0e 40% 100%);
   z-index: -1;
   bottom: 0;
 }
@@ -224,7 +224,7 @@ body::-webkit-scrollbar-thumb {
   flex-flow: row nowrap;
   justify-content: space-between;
   z-index: -1;
-  background: linear-gradient(#DFC0AE 0% 40%, #542B0E 40% 100%);
+  background: linear-gradient(#dfc0ae 0% 40%, #542b0e 40% 100%);
 }
 .pourquoi h2 {
   color: #542B0E;
@@ -262,7 +262,7 @@ body::-webkit-scrollbar-thumb {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
-  background: linear-gradient(#DFC0AE 0% 40%, #542B0E 40% 100%);
+  background: linear-gradient(#dfc0ae 0% 40%, #542b0e 40% 100%);
 }
 .whatis__img {
   margin-top: 30px;
@@ -323,6 +323,8 @@ body::-webkit-scrollbar-thumb {
 .members {
   padding-top: 56px;
   margin-top: 10rem;
+}
+.members__container {
   display: flex;
   justify-content: center;
   gap: 2rem;
@@ -352,7 +354,7 @@ body::-webkit-scrollbar-thumb {
   transition: transform 0.6s;
   transform-style: preserve-3d;
 }
-.members__h2 {
+.members__h3 {
   color: #F1EFEF;
   z-index: 10;
   text-align: center;
@@ -392,7 +394,7 @@ body::-webkit-scrollbar-thumb {
 }
 .members__front {
   position: relative;
-  background-color: #49B0B6;
+  background-color: #49b0b6;
   background-size: cover;
   color: rgb(255, 253, 253);
   z-index: 1;
@@ -642,9 +644,6 @@ body::-webkit-scrollbar-thumb {
     top: -150px;
     right: 50%;
     transform: translateX(50%);
-  }
-  .members {
-    padding-top: 152px;
   }
   .members__front::before, .members__back::before {
     height: 700px;
