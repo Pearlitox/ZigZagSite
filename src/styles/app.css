@@ -12,11 +12,11 @@ body {
 
 @font-face {
   font-family: "zigzag";
-  src: url("../assets/font/INVASION2000.TTF");
+  src: url("../assets/font/INVASION2000.TTF") format "TTF";
 }
 @font-face {
   font-family: "canada";
-  src: url("../assets/font/RadioCanadaBig-Regular.ttf");
+  src: url("../assets/font/RadioCanadaBig-Regular.ttf") format "ttf";
 }
 ::-moz-selection {
   background-color: #542B0E;
