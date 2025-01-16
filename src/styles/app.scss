@@ -1,6 +1,5 @@
-@import 'utils/variables';
-@import 'components/type';
-
+@import "utils/variables";
+@import "components/type";
 
 @font-face {
     font-family: "zigzag";
@@ -15,8 +14,6 @@
     background-color: $textBlack-color;
     color: $bg-color;
 }
-
-
 
 .index {
     cursor: none;
@@ -45,7 +42,6 @@
         font-family: zigzag;
     }
 
-
     .cursor-dot,
     .cursor-dot-outline {
         pointer-events: none;
@@ -55,24 +51,25 @@
         border-radius: 50%;
         opacity: 0;
         transform: translate(-50%, -50%);
-        transition: opacity 0.3s ease-in-out,
-                    transform 0.3s ease-in-out;
+        transition:
+            opacity 0.3s ease-in-out,
+            transform 0.3s ease-in-out;
     }
 
     .cursor-dot {
         $size: 8px;
         width: $size;
         height: $size;
-        background-color: $textBlack-color;  // Couleur par défaut
-        transition: background-color 0.3s ease-in-out;  // Ajoute la transition de couleur
+        background-color: $textBlack-color; // Couleur par défaut
+        transition: background-color 0.3s ease-in-out; // Ajoute la transition de couleur
     }
 
     .cursor-dot-outline {
         $size: 40px;
         width: $size;
         height: $size;
-        background-color: rgba($textBlack-color, 0.5);  // Couleur par défaut
-        transition: background-color 0.3s ease-in-out;  // Transition aussi pour le contour
+        background-color: rgba($textBlack-color, 0.5); // Couleur par défaut
+        transition: background-color 0.3s ease-in-out; // Transition aussi pour le contour
     }
 }
 
@@ -98,10 +95,9 @@ body::-webkit-scrollbar-thumb {
     text-align: center;
     // background: linear-gradient(0deg, $fourth-color 20%, rgba(118, 84, 15, 0) 90%), repeating-linear-gradient(transparent, transparent 50px, $fourth-color 52px), repeating-linear-gradient(90deg, transparent, transparent 50px, $fourth-color 52px);
     background-attachment: fixed;
-    background-image: url('../assets/images/bg-header.webp');
+    background-image: url("../assets/images/bg-header.webp");
     position: relative;
     cursor: auto;
-
 
     &__txt {
         padding: 15px;
@@ -111,12 +107,12 @@ body::-webkit-scrollbar-thumb {
             font-size: $h3-mobile;
             font-family: "Pixelify Sans", sans-serif;
             color: $textWhite-color;
-            text-shadow: 0px 5px 0px #3351E3; 
-            // max-width: 40ch;   
+            text-shadow: 0px 5px 0px #3351e3;
+            // max-width: 40ch;
         }
     }
     h1 {
-        text-shadow: 0px 7px 0px #3351E3; 
+        text-shadow: 0px 7px 0px #3351e3;
         color: $textWhite-color;
         font-size: $h1-mobile;
     }
@@ -155,11 +151,11 @@ body::-webkit-scrollbar-thumb {
             transform: translateX(-100%); /* Image sort de l'écran à gauche */
         }
     }
-    
+
     /* Animation pour img--right */
     @keyframes move-right {
         0% {
-            transform: translateX(100%); 
+            transform: translateX(100%);
         }
         100% {
             transform: translateX(-100%); /* Image sort de l'écran à gauche */
@@ -179,7 +175,7 @@ body::-webkit-scrollbar-thumb {
 .titleAnim {
     color: $textBlack-color;
     text-align: center;
-    
+
     // span {
     //   animation: glow-in .5s both;
     // }
@@ -191,14 +187,13 @@ body::-webkit-scrollbar-thumb {
     height: 100vh;
     position: relative;
     //background-color: black;
-    &__imgs{
-
+    &__imgs {
         position: absolute;
         width: 100%;
         display: flex;
         flex-flow: row nowrap;
         justify-content: space-between;
-        background: linear-gradient(#DFC0AE 0% 40%, #542B0E 40% 100%);
+        background: linear-gradient(#dfc0ae 0% 40%, #542b0e 40% 100%);
         z-index: -1;
         bottom: 0;
     }
@@ -227,7 +222,7 @@ body::-webkit-scrollbar-thumb {
 //     }
 //     to { opacity: 0.7; }
 // }
-  
+
 .pourquoi {
     position: relative;
     height: 100vh;
@@ -249,7 +244,7 @@ body::-webkit-scrollbar-thumb {
     //     transition: opacity 0.3s ease; /* Pour un léger effet de transition */
     //     color: $textBlack-color;
     // }
-    &__imgs{
+    &__imgs {
         position: absolute;
         bottom: 0;
         width: 100%;
@@ -257,16 +252,15 @@ body::-webkit-scrollbar-thumb {
         flex-flow: row nowrap;
         justify-content: space-between;
         z-index: -1;
-        background: linear-gradient(#DFC0AE 0% 40%, #542B0E 40% 100%);
+        background: linear-gradient(#dfc0ae 0% 40%, #542b0e 40% 100%);
     }
 
     h2 {
         color: $textBlack-color;
         font-family: zigzag;
-        color: $textBlack-color;      
+        color: $textBlack-color;
     }
 }
-
 
 .whatis {
     position: relative;
@@ -276,7 +270,6 @@ body::-webkit-scrollbar-thumb {
         justify-content: center;
         display: flex;
         font-family: "Pixelify Sans", sans-serif;
-
     }
 
     &__text {
@@ -284,10 +277,8 @@ body::-webkit-scrollbar-thumb {
         font-size: 28px;
         color: $textBlack-color;
         font-family: zigzag;
-
-    
     }
-    &__content{
+    &__content {
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
@@ -297,7 +288,7 @@ body::-webkit-scrollbar-thumb {
     //.dud {
     //    color: $third-color;
     //}
-    &__imgs{
+    &__imgs {
         z-index: -1;
         position: absolute;
         bottom: 0;
@@ -305,7 +296,7 @@ body::-webkit-scrollbar-thumb {
         display: flex;
         flex-flow: row nowrap;
         justify-content: space-between;
-        background: linear-gradient(#DFC0AE 0% 40%, #542B0E 40% 100%);
+        background: linear-gradient(#dfc0ae 0% 40%, #542b0e 40% 100%);
     }
     &__img {
         margin-top: 30px;
@@ -321,15 +312,12 @@ body::-webkit-scrollbar-thumb {
     }
 }
 
-
-
-
 .game {
     display: flex;
     align-items: flex-start;
     color: #fff;
     margin-bottom: $margin-3;
-    background-image: url('../assets/images/parquet.webp');
+    background-image: url("../assets/images/parquet.webp");
     background-size: contain;
 
     &__img {
@@ -337,7 +325,6 @@ body::-webkit-scrollbar-thumb {
         border: 10px solid $textBlack-color;
         border-radius: 20px;
         // clip-path: polygon(0 10px,10px 10px,10px 0,calc(100% - 10px) 0,calc(100% - 10px) 10px,100% 10px,100% calc(100% - 10px),calc(100% - 10px) calc(100% - 10px),calc(100% - 10px) 100%,10px 100%,10px calc(100% - 10px),0 calc(100% - 10px));
-
     }
 
     h2 {
@@ -375,21 +362,19 @@ body::-webkit-scrollbar-thumb {
         border: 10px solid $textBlack-color;
         background-color: $bg-color;
         // clip-path: polygon(0 10px,10px 10px,10px 0,calc(100% - 10px) 0,calc(100% - 10px) 10px,100% 10px,100% calc(100% - 10px),calc(100% - 10px) calc(100% - 10px),calc(100% - 10px) 100%,10px 100%,10px calc(100% - 10px),0 calc(100% - 10px));
-
     }
-    
 }
-
-
-
 
 .members {
     padding-top: $margin-2;
     margin-top: 10rem;
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    flex-wrap: wrap;
+
+    &__container {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        flex-wrap: wrap;
+    }
 
     &__allCard {
         perspective: 1000px;
@@ -421,10 +406,10 @@ body::-webkit-scrollbar-thumb {
         height: 100%;
         text-align: center;
         transition: transform 0.6s;
-        transform-style: preserve-3d;   
+        transform-style: preserve-3d;
     }
 
-    &__h2 {
+    &__h3 {
         // position: absolute;
         // top: 50%;
         color: $textWhite-color;
@@ -449,9 +434,9 @@ body::-webkit-scrollbar-thumb {
         transform: translateX(-50%);
         width: 90%;
     }
-    
 
-    &__front, &__back {
+    &__front,
+    &__back {
         position: absolute;
         top: 0;
         left: 0;
@@ -463,8 +448,9 @@ body::-webkit-scrollbar-thumb {
         background-clip: padding-box;
     }
 
-    &__front::before, &__back::before {
-        content: '';
+    &__front::before,
+    &__back::before {
+        content: "";
         position: relative;
         // top: -2px;
         // left: -2px;
@@ -477,26 +463,26 @@ body::-webkit-scrollbar-thumb {
 
     &__front {
         position: relative;
-        background-color: #49B0B6;
+        background-color: #49b0b6;
         background-size: cover;
         // background-position: center;
         color: rgb(255, 253, 253);
         z-index: 1;
-        background-image: url('../assets/images/members/julie.png');
+        background-image: url("../assets/images/members/julie.png");
         background-position: center;
 
-        &--amandine{
-            background-image: url('../assets/images/members/amandine.png');
+        &--amandine {
+            background-image: url("../assets/images/members/amandine.png");
         }
         &--gabriel {
-            background-image: url('../assets/images/members/gabriel.png');
+            background-image: url("../assets/images/members/gabriel.png");
         }
-        &--pearl{
-            background-image: url('../assets/images/members/pearl.png');
+        &--pearl {
+            background-image: url("../assets/images/members/pearl.png");
         }
         &--guillaume {
-            background-image: url('../assets/images/members/guillaume.png');
-        }        
+            background-image: url("../assets/images/members/guillaume.png");
+        }
     }
     &__back {
         color: $textWhite-color;
@@ -517,7 +503,6 @@ body::-webkit-scrollbar-thumb {
     }
 
     &__icon {
-    
         .social {
             text-align: center;
             // justify-content: center;
@@ -528,7 +513,6 @@ body::-webkit-scrollbar-thumb {
             z-index: 10;
             justify-content: center;
             // margin-left: -30px;
-
 
             // &__amandine {
             //     width: 100%;
@@ -543,31 +527,26 @@ body::-webkit-scrollbar-thumb {
                 width: 2rem;
                 height: 2rem;
                 background: transparent;
-                border: .2rem solid $textWhite-color;
+                border: 0.2rem solid $textWhite-color;
                 border-radius: 50%;
-                box-shadow: 0 .2rem .5rem $textWhite-color;
+                box-shadow: 0 0.2rem 0.5rem $textWhite-color;
                 font-size: $p-mobile;
                 color: $textWhite-color;
-                margin: 2.5rem .75rem 3rem;
-                transition: .5s ease;
+                margin: 2.5rem 0.75rem 3rem;
+                transition: 0.5s ease;
                 text-decoration: none;
 
                 &:hover {
                     background: transparent;
                     color: $bg-color;
                     border-color: $bg-color;
-                    transform:scale(1.4);
-                    box-shadow: 0 .2rem .5rem $bg-color;
-
+                    transform: scale(1.4);
+                    box-shadow: 0 0.2rem 0.5rem $bg-color;
                 }
-            }   
+            }
         }
     }
 }
-
-
-
-
 
 .footer {
     background-color: $textBlack-color;
@@ -594,7 +573,7 @@ body::-webkit-scrollbar-thumb {
         font-size: $p-mobile;
 
         &:hover {
-            transition: .2s ease-out;
+            transition: 0.2s ease-out;
             color: $bg-color;
         }
     }
@@ -603,7 +582,6 @@ body::-webkit-scrollbar-thumb {
         cursor: pointer;
     }
 }
-
 
 .credits {
     background-color: $bg-color;
@@ -616,7 +594,7 @@ body::-webkit-scrollbar-thumb {
         display: flex;
         width: 100vw;
         margin-bottom: $margin-3;
-    
+
         a {
             text-decoration: none;
             display: flex;
@@ -645,28 +623,24 @@ body::-webkit-scrollbar-thumb {
 
         h2 {
             margin: 0%;
-        margin-left: 0.5em;
-        font-size: $h2-mobile;
+            margin-left: 0.5em;
+            font-size: $h2-mobile;
         }
         ul {
-        list-style: none;
-        margin-left: 0.5em;
-        line-height: 1.6;
-        font-size: $p-mobile;
-        text-indent: -1.5em;
+            list-style: none;
+            margin-left: 0.5em;
+            line-height: 1.6;
+            font-size: $p-mobile;
+            text-indent: -1.5em;
         }
         p {
-        margin-left: 0.5em;
-        font-size: $p-mobile;
+            margin-left: 0.5em;
+            font-size: $p-mobile;
         }
     }
 }
 
-
-
-
 @media screen and (min-width: 489px) {
-
     .intro {
         //margin-bottom: $margint-4;
         &__txt {
@@ -693,16 +667,16 @@ body::-webkit-scrollbar-thumb {
     }
     .credits {
         h2 {
-        font-size: $h2-tablet;
+            font-size: $h2-tablet;
         }
         p,
         ul {
-        font-size: $p-tablet;
+            font-size: $p-tablet;
         }
     }
 }
 
-@media screen and (min-width: 500px ) {
+@media screen and (min-width: 500px) {
     // .game {
     //     &__right {
     //         margin: auto;
@@ -727,29 +701,29 @@ body::-webkit-scrollbar-thumb {
         flex-direction: column;
         align-items: center;
 
-        &__left, 
+        &__left,
         &__right {
             padding: 20px;
             // width: 100%;
         }
         &__left {
-        position: static;
-        margin-top: 20px;
-        margin-bottom: 20px;
+            position: static;
+            margin-top: 20px;
+            margin-bottom: 20px;
         }
         &__right {
             margin: auto;
         }
-    } 
+    }
 }
 
-@media screen and (max-width:768px){
-    .members__content--iner{
-        width:80%;
-    } 
+@media screen and (max-width: 768px) {
+    .members__content--iner {
+        width: 80%;
+    }
 }
 
-@media screen and (min-width:768px){
+@media screen and (min-width: 768px) {
     html {
         // overflow-x: hidden;
         scroll-snap-type: y mandatory;
@@ -794,24 +768,25 @@ body::-webkit-scrollbar-thumb {
             display: none;
             bottom: -320px;
             width: 300px;
-            
-                display: block;
-                position: absolute;
-                width: 300px;
-                top: -150px;
-                right: 50%;
-                transform: translateX(50%);
-            
+
+            display: block;
+            position: absolute;
+            width: 300px;
+            top: -150px;
+            right: 50%;
+            transform: translateX(50%);
         }
     }
     .members {
-        padding-top: $margind-3;
-        &__front::before, &__back::before {
+        // padding-top: $margind-3;
+        &__front::before,
+        &__back::before {
             height: 700px;
             width: 550px;
         }
         &__front {
-            &--guillaume, &--amandine {
+            &--guillaume,
+            &--amandine {
                 h2 {
                     font-size: 40px;
                 }
@@ -831,7 +806,7 @@ body::-webkit-scrollbar-thumb {
             margin-top: 375px !important;
             font-size: 40px;
         }
-    
+
         &__h4 {
             top: 55%;
         }
@@ -845,26 +820,26 @@ body::-webkit-scrollbar-thumb {
         h2,
         p,
         ul {
-        margin-left: 2rem;
+            margin-left: 2rem;
         }
         h2 {
-        font-size: $h2-desktop;
+            font-size: $h2-desktop;
         }
         p,
         ul {
-        font-size: $p-desktop;
+            font-size: $p-desktop;
         }
     }
 }
 
-@media screen and (min-width:789px){
+@media screen and (min-width: 789px) {
     .titleAnim {
         font-size: $h2-desktop;
     }
 
     // .members{
     //     height: 300vh;
-    // } 
+    // }
     .header {
         &__img {
             &--topleft {
@@ -886,7 +861,7 @@ body::-webkit-scrollbar-thumb {
     }
 }
 
-@media screen and (min-width:1000px){
+@media screen and (min-width: 1000px) {
     .header {
         h1 {
             font-size: 250px;
@@ -905,7 +880,7 @@ body::-webkit-scrollbar-thumb {
     //     height: auto;
     //     height: 100vh;
     //     margin-bottom: 0;
-    // } 
+    // }
     .whatis {
         position: relative;
         &__img {
@@ -930,7 +905,7 @@ body::-webkit-scrollbar-thumb {
         }
     }
 }
-@media screen and (min-width:1200px){
+@media screen and (min-width: 1200px) {
     .header {
         background-size: cover;
 

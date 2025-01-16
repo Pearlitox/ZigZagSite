@@ -1,265 +1,482 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- Open Graph data -->
-  <meta property ="og:site_name" content="julieducarne">
-  <meta property ="og:title" content="ZigZag | Sensibilisation au TDAH">
-  <meta property ="og:description" content="Un projet de groupe pour sensibiliser aux personnes souffrant de TDAH.">
-  <meta property ="og:type" content="website">
-  <meta property ="og:url" content="https://julieducarne.be/projets/ilab">
-  <meta property ="og:image" content="https://julieducarne.be/projets/ilab/assets/images/content.webp">
-  <meta property ="og:image:width" content="280">
-  <meta property ="og:image:height" content="280">
-  <meta name="description" content="Un projet de groupe pour sensibiliser aux personnes souffrant de TDAH.">
+    <!-- Open Graph data -->
+    <meta property="og:site_name" content="julieducarne" />
+    <meta property="og:title" content="ZigZag | Sensibilisation au TDAH" />
+    <meta
+      property="og:description"
+      content="Un projet de groupe pour sensibiliser aux personnes souffrant de TDAH."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://julieducarne.be/projets/ilab" />
+    <meta
+      property="og:image"
+      content="https://julieducarne.be/projets/ilab/assets/images/content.webp"
+    />
+    <meta property="og:image:width" content="280" />
+    <meta property="og:image:height" content="280" />
+    <meta
+      name="description"
+      content="Un projet de groupe pour sensibiliser aux personnes souffrant de TDAH."
+    />
 
-  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <!-- <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
+    /> -->
 
-
-  <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=Radio+Canada+Big:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet"> -->
 
-  <link rel="icon" type="image/x-icon" href="assets/images/Actor1.png">
-  <title>ZigZag | Sensibilisation au TDAH</title>
+    <link rel="icon" type="image/x-icon" href="assets/images/Actor1.png" />
+    <title>ZigZag | Sensibilisation au TDAH</title>
 
-  <link rel="stylesheet" href="styles/app.css">
-  <script src="scripts/app.js" defer></script>
-</head>
+    <link rel="stylesheet" href="styles/app.css" />
+    <script src="scripts/app.js" defer></script>
+  </head>
 
+  <body class="index">
+    <div class="cursor-dot-outline"></div>
+    <div class="cursor-dot"></div>
 
-<body class="index">
-
-  <div class="cursor-dot-outline"></div>
-  <div class="cursor-dot"></div>
-
-  <header class="header scroll">
-    <div class="header__txt">
-      <h1>ZigZag</h1>
-      <h2 class="header__title">Un projet de sensibilisation aux personnes souffrant de troubles mentaux</h2>
-    </div>   
-    <img class="header__img header__img--topleft" src="assets/images/cloudtopleft.png" alt="Illustration de nuage en pixel art">
-    <img class="header__img header__img--top" src="assets/images/cloudtop.png" alt="Illustration de nuage en pixel art">
-    <img class="header__img header__img--bottom" src="assets/images/cloudbottom.webp" alt="Illustration de nuage en pixel art">
-    <img class="header__img header__img--right" src="assets/images/cloudright.png" alt="Illustration de nuage en pixel art">
-  </header>
-
-  <section class="section intro scroll">
-    <h3 class="intro__title titleAnim">Introduction:</h3>
-    <p class="intro__txt">Les troubles de l’attention, handicaps invisibles, sont souvent mal compris et représentés. Que ressentent les personnes concernées&nbsp;? Quels obstacles doivent-elles surmonter&nbsp;? Comment mieux les soutenir&nbsp;?
-    ZigZag vous plonge dans la tête d’une personne possédant un TDAH au travers des puzzles de la vie quotidienne.</p>
-    <!-- <div class="intro__img"></div> -->
-
-     <div class="intro__imgs">
-      <img class="intro__img" src="assets/images/furniture-deco3.webp" alt="Illustration de notre partie salle à manger de notre jeu, en pixel art">
-      
-      <img class="intro__img" src="assets/images/furniture-deco3-1.webp" alt="Illustration de notre partie cuisine de notre jeu, en pixel art">
-     </div>
-  </section>
-
-
-  
-
-  <section class="section whatis scroll">
-    <div class="whatis__content">
-      <div class="titleAnim whatis__text"></div>
-      <div class="whatis__container">
+    <header class="header scroll">
+      <div class="header__txt">
+        <h1>ZigZag</h1>
+        <h2 class="header__title">
+          Un projet de sensibilisation au trouble de l'attention
+        </h2>
       </div>
-      <p class="whatis__p">Le TDAH (Trouble du Déficit de l'Attention avec ou sans Hyperactivité) se caractérise par l'inattention, l'impulsivité et parfois l’hyperactivité. Il affecte aussi bien les enfants que les adultes, et peut compliquer leur vie professionnelle et sociale.
-      Il existe plusieurs traitements pour gérer les symptômes du TDAH, comme la thérapie comportementale et les traitements médicamenteux.</p>
-    </div>
-    <div class="whatis__imgs">
-      <img class="whatis__img" src="assets/images/furniture-deco2-1.webp" alt="Illustration de notre partie chambre, en pixel art">
-      <img class="whatis__img" src="assets/images/furniture-deco2.webp" alt="Illustration de notre partie salon de notre jeu, en pixel art">
-    </div>
-  </section>
+      <img
+        class="header__img header__img--topleft"
+        src="assets/images/cloudtopleft.png"
+        alt="Illustration de nuage en pixel art"
+      />
+      <img
+        class="header__img header__img--top"
+        src="assets/images/cloudtop.png"
+        alt="Illustration de nuage en pixel art"
+      />
+      <img
+        class="header__img header__img--bottom"
+        src="assets/images/cloudbottom.webp"
+        alt="Illustration de nuage en pixel art"
+      />
+      <img
+        class="header__img header__img--right"
+        src="assets/images/cloudright.png"
+        alt="Illustration de nuage en pixel art"
+      />
+    </header>
 
-  <section class="section pourquoi scroll">
-    <div class="pourquoi__content">
+    <section class="section intro scroll">
+      <h3 class="intro__title titleAnim">Introduction:</h3>
+      <p class="intro__txt">
+        Les troubles de l’attention, handicaps invisibles, sont souvent mal
+        compris et représentés. Que ressentent les personnes concernées&nbsp;?
+        Quels obstacles doivent-elles surmonter&nbsp;? Comment mieux les
+        soutenir&nbsp;? ZigZag vous plonge dans la tête d’une personne possédant
+        un TDAH au travers des puzzles de la vie quotidienne.
+      </p>
+      <!-- <div class="intro__img"></div> -->
 
-      <h2 class="titleAnim">Origine du projet</h2>
-      <p class="pourquoi__txt">ZigZag est né dans le cadre du projet iLab, un atelier de l’option Design Web Transmedia à la Haute École Albert Jacquard, centré cette année sur le thème des handicaps. Nous avons choisi de travailler sur les neurodivergences, principalement sur les troubles de l’attention, car plusieurs d’entre nous connaissons personnellement des personnes affectées par ce trouble. Notre but, avant tout, est de créer un expérience dédramatisante et ludique tout en portant attention aux difficultés quotidiennes liées à ce trouble.</p>
-    </div>
-    </div>
-    <div class="intro__imgs">
-      <img class="intro__img" src="assets/images/furniture-deco1.webp" alt="Illustration de notre partie armoires/étagères de notre jeu, en pixel art">
-      
-      <img class="intro__img" src="assets/images/furniture-deco1-2.webp" alt="Illustration de notre partie bureau de notre jeu, en pixel art">
-     </div>
-  </section>
+      <div class="intro__imgs">
+        <img
+          class="intro__img"
+          src="assets/images/furniture-deco3.webp"
+          alt="Illustration de notre partie salle à manger de notre jeu, en pixel art"
+        />
 
-  
-  <section class="game scroll">
-    <div class="game__left" id="left-content">
-      <h2 class="game__title">Notre projet, c'est...</h2>
-      <img class="game__img" src="assets/images/borne.webp" alt="Conception de la borne en 3D">
-    </div>
-    <div class="game__right">
-      <div class="game__box--right">
-        <h2>Un jeu</h2>
-        <p>Nous développons un jeu en pixel art, vu de dessus, où le joueur incarne un personnage atteint de TDAH. Le but est de réaliser des tâches simples comme faire le lit, aspirer ou ranger des livres, avec d'autres quêtes à découvrir.</p>
+        <img
+          class="intro__img"
+          src="assets/images/furniture-deco3-1.webp"
+          alt="Illustration de notre partie cuisine de notre jeu, en pixel art"
+        />
       </div>
-      <div class="game__box--right">
-        <h2>Immersif</h2>
-        <p>Les mécaniques du jeu reflètent les défis quotidiens d'une personne avec TDAH. Le joueur sera souvent distrait par des imprévus et devra surmonter des obstacles pour accomplir ses tâches, rendant l'expérience plus difficile et immersive.</p>
+    </section>
+
+    <section class="section whatis scroll">
+      <div class="whatis__content">
+        <h2 class="titleAnim whatis__text">C'est quoi le TDAH ?</h2>
+        <div class="whatis__container"></div>
+        <p class="whatis__p">
+          Le TDAH (Trouble du Déficit de l'Attention avec ou sans Hyperactivité)
+          se caractérise par l'inattention, l'impulsivité et parfois
+          l’hyperactivité. Il affecte aussi bien les enfants que les adultes, et
+          peut compliquer leur vie professionnelle et sociale. Il existe
+          plusieurs traitements pour gérer les symptômes du TDAH, comme la
+          thérapie comportementale et les traitements médicamenteux.
+        </p>
       </div>
-      <div class="game__box--right">
-        <h2>Une mission</h2>
-        <p>Le jeu mise sur la capacité du joueur à rester concentré malgré les distractions. L'objectif est de terminer toutes les tâches, mais il est aussi possible de perdre le contrôle, reflétant la complexité du TDAH dans la vie réelle.</p>
+      <div class="whatis__imgs">
+        <img
+          class="whatis__img"
+          src="assets/images/furniture-deco2-1.webp"
+          alt="Illustration de notre partie chambre, en pixel art"
+        />
+        <img
+          class="whatis__img"
+          src="assets/images/furniture-deco2.webp"
+          alt="Illustration de notre partie salon de notre jeu, en pixel art"
+        />
       </div>
-    </div>
-  </section>
+    </section>
 
+    <section class="section pourquoi scroll">
+      <div class="pourquoi__content">
+        <h2 class="titleAnim">Origine du projet</h2>
+        <p class="pourquoi__txt">
+          ZigZag est né dans le cadre du projet iLab, un atelier de l’option
+          Design Web Transmedia à la Haute École Albert Jacquard, centré cette
+          année sur le thème des handicaps. Nous avons choisi de travailler sur
+          les neurodivergences, principalement sur les troubles de l’attention,
+          car plusieurs d’entre nous connaissons personnellement des personnes
+          affectées par ce trouble. Notre but, avant tout, est de créer un
+          expérience dédramatisante et ludique tout en portant attention aux
+          difficultés quotidiennes liées à ce trouble.
+        </p>
+      </div>
 
-  <section class="members scroll">
+      <div class="intro__imgs">
+        <img
+          class="intro__img"
+          src="assets/images/furniture-deco1.webp"
+          alt="Illustration de notre partie armoires/étagères de notre jeu, en pixel art"
+        />
 
-    <div class="members__allCard">
-        <div class="members__flipCard">
-            <div class="members__inner">
-                <div class="members__front members__front--julie">
-                  <h4 class="members__h4">Dev du présent site & designeuse sur Figma</h4>
-                  <h2 class="members__h2">Julie</h2>
-                </div>
-                <div class="members__back">
-                    <!-- <h2>Back Side</h2> -->
-                    <p>Préférant largement coder que designer, Julie est en tâche de réaliser ce site internet. Cependant, ça ne l'a pas empêchée de concevoir plusieurs maquettes de design pour le jeu sur Figma.</p>
-                    <div class="members__icon">
-                        <div class="social">
-                          <a target="_blank" aria-label="Github de Julie Ducarne" href="https://github.com/jj-dcrn" class="social__link"><i class='bx bxl-github'></i></a>
-                          <a target="_blank" aria-label="Instagram de Julie Ducarne" href="https://www.instagram.com/angelvibes_dwt/" class="social__link"><i class='bx bxl-instagram-alt'></i></a>
-                          <a target="_blank" aria-label="YouTube de Julie Ducarne" href="https://julieducarne.be" class="social__link"><i class="fa-solid fa-suitcase-rolling"></i></a>
-                          <a target="_blank" aria-label="linkedin de Julie Ducarne" href="https://www.linkedin.com/in/julie-ducarne-5682aa280/" class="social__link"><i class='bx bxl-linkedin'></i></a>
-                        </div>
-                      </div>
-                </div>
-            </div>
+        <img
+          class="intro__img"
+          src="assets/images/furniture-deco1-2.webp"
+          alt="Illustration de notre partie bureau de notre jeu, en pixel art"
+        />
+      </div>
+    </section>
+
+    <section class="game scroll">
+      <div class="game__left" id="left-content">
+        <h2 class="game__title">Notre projet, c'est...</h2>
+        <img
+          class="game__img"
+          src="assets/images/borne.webp"
+          alt="Conception de la borne en 3D"
+        />
+      </div>
+      <div class="game__right">
+        <div class="game__box--right">
+          <h2>Un jeu</h2>
+          <p>
+            Nous développons un jeu en pixel art, vu de dessus, où le joueur
+            incarne un personnage atteint de TDAH. Le but est de réaliser des
+            tâches simples du quotidien comme faire le lit, aspirer ou ranger
+            des livres, avec d'autres quêtes à découvrir.
+          </p>
         </div>
-    </div>
-
-    <div class="members__allCard">
-        <div class="members__flipCard">
-            <div class="members__inner">
-                <div class="members__front members__front--amandine">
-                  <h4 class="members__h4">Dev du mini-jeu & rédactrice</h4>
-                    <h2 class="members__h2 members__longName">Amandine</h2>
-                </div>
-                <div class="members__back">
-                    <!-- <h2>Back Side</h2> -->
-                    <p>Bien qu’ayant une passion pour le frontend, Amandine (Mélu pour les intimes) se retrouve souvent en backend pour s’assurer du bon fonctionnement du code...</p>
-                    <div class="members__icon">
-                      <div class="social social__amandine">
-                        <a target="_blank" aria-label="Github d'Amandine Cerato" href="https://github.com/MeluCRT" class="social__link"><i class='bx bxl-github'></i></a>
-                        <a target="_blank" aria-label="Instagram d'Amandine Cerato" href="https://www.instagram.com/melucrt/" class="social__link"><i class='bx bxl-instagram-alt'></i></a>
-                      </div>
-                    </div>
-                </div>
-            </div>
+        <div class="game__box--right">
+          <h2>Immersif</h2>
+          <p>
+            Les mécaniques du jeu reflètent les défis quotidiens d'une personne
+            avec TDAH. Le joueur sera souvent distrait par des imprévus et devra
+            surmonter des obstacles pour accomplir ses tâches, rendant
+            l'expérience plus difficile et immersive.
+          </p>
         </div>
-    </div>
-
-    <div class="members__allCard">
-        <div class="members__flipCard">
-            <div class="members__inner">
-                <div class="members__front members__front--gabriel">
-                  <h4 class="members__h4">Dev du mini-jeu & rédacteur</h4>
-                    <h2 class="members__h2">Gabriel</h2>
-                </div>
-                <div class="members__back">
-                    <!-- <h2>Back Side</h2> -->
-                    <p>L'idée du jeu nous vient directement de Gabriel, qui se chargera avec l'aide de coéquipiers, de la confection du jeu. Gabriel est aussi le rédacteur en chef du groupe, et garde une trace de chaque moment sur Medium.</p>
-                    <div class="members__icon">
-                      <div class="social">
-                        <a target="_blank" aria-label="Github de Gabriel Manciu" href="https://github.com/TardiGab" class="social__link"><i class='bx bxl-github'></i></a>
-                        <a target="_blank" aria-label="Instagram de Gabriel Manciu" href="https://www.instagram.com/gabmnc_dwt?igsh=YmYxb3lza2s0cmtr" class="social__link"><i class='bx bxl-instagram-alt'></i></a>
-                        <a target="_blank" aria-label="Linkedin de Gabriel Manciu" href="https://www.linkedin.com/in/gabriel-manciu-75754a196/" class="social__link">
-                          <i class='bx bxl-linkedin'></i>
-                        </a>
-                      </div>
-                    </div>
-                </div>
-            </div>
+        <div class="game__box--right">
+          <h2>Une mission</h2>
+          <p>
+            Le jeu mise sur la capacité du joueur à rester concentré malgré les
+            distractions. L'objectif est de terminer toutes les tâches, mais il
+            est aussi possible de perdre le contrôle, reflétant la complexité du
+            TDAH dans la vie réelle.
+          </p>
         </div>
-    </div>
+      </div>
+    </section>
 
-    <div class="members__allCard">
-        <div class="members__flipCard">
+    <section class="members scroll">
+      <h2 class="titleAnim members__title">Membres</h2>
+
+      <div class="members__container">
+        <div class="members__allCard">
+          <div class="members__flipCard">
             <div class="members__inner">
-                <div class="members__front members__front--pearl">
-                  <h4 class="members__h4">Designeuse & illustratrice en herbe</h4>
-                    <h2 class="members__h2">Pearl</h2>
+              <div class="members__front members__front--julie">
+                <h4 class="members__h4">
+                  Dev du présent site & designeuse sur Figma
+                </h4>
+                <h3 class="members__h3">Julie</h3>
+              </div>
+              <div class="members__back">
+                <!-- <h2>Back Side</h2> -->
+                <p>
+                  Préférant largement coder que designer, Julie est en tâche de
+                  réaliser ce site internet. Cependant, ça ne l'a pas empêchée
+                  de concevoir plusieurs maquettes de design pour le jeu sur
+                  Figma.
+                </p>
+                <div class="members__icon">
+                  <div class="social">
+                    <a
+                      target="_blank"
+                      aria-label="Github de Julie Ducarne"
+                      href="https://github.com/jj-dcrn"
+                      class="social__link"
+                      ><i class="bx bxl-github"></i
+                    ></a>
+                    <a
+                      target="_blank"
+                      aria-label="Instagram de Julie Ducarne"
+                      href="https://www.instagram.com/angelvibes_dwt/"
+                      class="social__link"
+                      ><i class="bx bxl-instagram-alt"></i
+                    ></a>
+                    <a
+                      target="_blank"
+                      aria-label="YouTube de Julie Ducarne"
+                      href="https://julieducarne.be"
+                      class="social__link"
+                      ><i class="fa-solid fa-suitcase-rolling"></i
+                    ></a>
+                    <a
+                      target="_blank"
+                      aria-label="linkedin de Julie Ducarne"
+                      href="https://www.linkedin.com/in/julie-ducarne-5682aa280/"
+                      class="social__link"
+                      ><i class="bx bxl-linkedin"></i
+                    ></a>
+                  </div>
                 </div>
-                <div class="members__back members__back--pearl">
-                    <!-- <h2>Back Side</h2> -->
-                    <p>Son domaine de prédilection, c’est le design. Passionée de dessin et d’animations 2D, elle essaie toujours d’incorporer ses compétences à des sites originaux et dynamiques.
-                    Elle s’est plongée dans le pixel art avec la création des sprites et modification des assets du jeu (en étroite collaboration avec Mélu/Amandine).</p>
-                    <div class="members__icon">
-                      <div class="social">
-                        <a target="_blank" aria-label="Github de Pearl Bondele" href="https://github.com/Pearlitox" class="social__link"><i class='bx bxl-github'></i></a>
-                        <a target="_blank" aria-label="Instagram de Pearl Bondele" href="https://www.instagram.com/pearl_bondele/" class="social__link"><i class='bx bxl-instagram-alt'></i></a>
-                        <a target="_blank" aria-label="YouTube de Pearl Bondele" href="https://www.youtube.com/channel/UCkyt77KXEirOkKsJkhgHwbw" class="social__link"><i class='bx bxl-youtube'></i></a>
-                        <a target="_blank" aria-label="Mail de Pearl Bondele" href="mailto:pearlbondele@gmail.com" class="social__link">
-                          <i class="fa-regular fa-envelope"></i>
-                        </a>
-                      </div>
-                    </div>
-                </div>
+              </div>
             </div>
+          </div>
         </div>
-    </div>
 
-    <div class="members__allCard">
-        <div class="members__flipCard">
+        <div class="members__allCard">
+          <div class="members__flipCard">
             <div class="members__inner">
-                <div class="members__front members__front--guillaume">
-                  <h4 class="members__h4">Photographe du groupe & designer de la borne</h4>
-                    <h2 class="members__h2 members__longName">Guillaume</h2>
+              <div class="members__front members__front--amandine">
+                <h4 class="members__h4">Dev du mini-jeu & rédactrice</h4>
+                <h3 class="members__h3 members__longName">Amandine</h3>
+              </div>
+              <div class="members__back">
+                <!-- <h2>Back Side</h2> -->
+                <p>
+                  Bien qu’ayant une passion pour le frontend, Amandine (Mélu
+                  pour les intimes) se retrouve souvent en backend pour
+                  s’assurer du bon fonctionnement du code, et tend à toucher à
+                  de nombreux différents aspects d'un projet.
+                </p>
+                <div class="members__icon">
+                  <div class="social social__amandine">
+                    <a
+                      target="_blank"
+                      aria-label="Github d'Amandine Cerato"
+                      href="https://github.com/MeluCRT"
+                      class="social__link"
+                      ><i class="bx bxl-github"></i
+                    ></a>
+                    <a
+                      target="_blank"
+                      aria-label="Instagram d'Amandine Cerato"
+                      href="https://www.instagram.com/melucrt/"
+                      class="social__link"
+                      ><i class="bx bxl-instagram-alt"></i
+                    ></a>
+                  </div>
                 </div>
-                <div class="members__back">
-                    <!-- <h2>Back Side</h2> -->
-                    <p>Guillaume, passionné par le front-end et l'UX/UI, collabore à la création du site web ainsi que la conception physique de la borne interactive. En tant que vidéaste et photographe, il s'assure également de capturer et de valoriser visuellement le projet.</p>
-                    <div class="members__icon">
-                      <div class="social">
-                        <a target="_blank" aria-label="Github de Guillaume Laplume" href="https://github.com/GlupyLoop" class="social__link"><i class='bx bxl-github'></i></a>
-                        <a target="_blank" aria-label="Instagram de Guillaume Laplume" href="https://www.instagram.com/glupyloop/" class="social__link"><i class='bx bxl-instagram-alt'></i></a>
-                        <a target="_blank" aria-label="Linkedin de Guillaume Laplume" href="www.linkedin.com/in/guillaume-laplume-8ba103117" class="social__link"><i class='bx bxl-linkedin'></i></a>
-                      </div>
-                    </div>
-                </div>
+              </div>
             </div>
+          </div>
         </div>
-    </div>
 
+        <div class="members__allCard">
+          <div class="members__flipCard">
+            <div class="members__inner">
+              <div class="members__front members__front--gabriel">
+                <h4 class="members__h4">Dev du mini-jeu & rédacteur</h4>
+                <h3 class="members__h3">Gabriel</h3>
+              </div>
+              <div class="members__back">
+                <!-- <h2>Back Side</h2> -->
+                <p>
+                  L'idée du jeu nous vient directement de Gabriel, qui se charge
+                  avec l'aide de coéquipiers, de la confection du jeu. Gabriel
+                  est aussi le rédacteur en chef du groupe, et garde une trace
+                  de chaque moment sur Medium.
+                </p>
+                <div class="members__icon">
+                  <div class="social">
+                    <a
+                      target="_blank"
+                      aria-label="Github de Gabriel Manciu"
+                      href="https://github.com/TardiGab"
+                      class="social__link"
+                      ><i class="bx bxl-github"></i
+                    ></a>
+                    <a
+                      target="_blank"
+                      aria-label="Instagram de Gabriel Manciu"
+                      href="https://www.instagram.com/gabmnc_dwt?igsh=YmYxb3lza2s0cmtr"
+                      class="social__link"
+                      ><i class="bx bxl-instagram-alt"></i
+                    ></a>
+                    <a
+                      target="_blank"
+                      aria-label="Linkedin de Gabriel Manciu"
+                      href="https://www.linkedin.com/in/gabriel-manciu-75754a196/"
+                      class="social__link"
+                    >
+                      <i class="bx bxl-linkedin"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
-  </section>
+        <div class="members__allCard">
+          <div class="members__flipCard">
+            <div class="members__inner">
+              <div class="members__front members__front--pearl">
+                <h4 class="members__h4">Designeuse & illustratrice en herbe</h4>
+                <h3 class="members__h3">Pearl</h3>
+              </div>
+              <div class="members__back members__back--pearl">
+                <!-- <h2>Back Side</h2> -->
+                <p>
+                  Son domaine de prédilection, c’est le design. Passionée de
+                  dessin et d’animations 2D, elle essaie toujours d’incorporer
+                  ses compétences à des sites originaux et dynamiques. Elle
+                  s’est plongée dans le pixel art avec la création des sprites
+                  et modification des assets du jeu (en étroite collaboration
+                  avec Amandine).
+                </p>
+                <div class="members__icon">
+                  <div class="social">
+                    <a
+                      target="_blank"
+                      aria-label="Github de Pearl Bondele"
+                      href="https://github.com/Pearlitox"
+                      class="social__link"
+                      ><i class="bx bxl-github"></i
+                    ></a>
+                    <a
+                      target="_blank"
+                      aria-label="Instagram de Pearl Bondele"
+                      href="https://www.instagram.com/pearl_bondele/"
+                      class="social__link"
+                      ><i class="bx bxl-instagram-alt"></i
+                    ></a>
+                    <a
+                      target="_blank"
+                      aria-label="YouTube de Pearl Bondele"
+                      href="https://www.youtube.com/channel/UCkyt77KXEirOkKsJkhgHwbw"
+                      class="social__link"
+                      ><i class="bx bxl-youtube"></i
+                    ></a>
+                    <a
+                      target="_blank"
+                      aria-label="Mail de Pearl Bondele"
+                      href="mailto:pearlbondele@gmail.com"
+                      class="social__link"
+                    >
+                      <i class="fa-regular fa-envelope"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
-  
+        <div class="members__allCard">
+          <div class="members__flipCard">
+            <div class="members__inner">
+              <div class="members__front members__front--guillaume">
+                <h4 class="members__h4">
+                  Photographe du groupe & designer de la borne
+                </h4>
+                <h3 class="members__h3 members__longName">Guillaume</h3>
+              </div>
+              <div class="members__back">
+                <!-- <h2>Back Side</h2> -->
+                <p>
+                  Guillaume, passionné par le front-end et l'UX/UI, collabore à
+                  la création du site web ainsi que la conception physique de la
+                  borne interactive. En tant que vidéaste et photographe, il
+                  s'assure également de capturer et de valoriser visuellement le
+                  projet.
+                </p>
+                <div class="members__icon">
+                  <div class="social">
+                    <a
+                      target="_blank"
+                      aria-label="Github de Guillaume Laplume"
+                      href="https://github.com/GlupyLoop"
+                      class="social__link"
+                      ><i class="bx bxl-github"></i
+                    ></a>
+                    <a
+                      target="_blank"
+                      aria-label="Instagram de Guillaume Laplume"
+                      href="https://www.instagram.com/glupyloop/"
+                      class="social__link"
+                      ><i class="bx bxl-instagram-alt"></i
+                    ></a>
+                    <a
+                      target="_blank"
+                      aria-label="Linkedin de Guillaume Laplume"
+                      href="www.linkedin.com/in/guillaume-laplume-8ba103117"
+                      class="social__link"
+                      ><i class="bx bxl-linkedin"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  <footer class="footer scroll">
-    <ul class="footer__contact">
+    <footer class="footer scroll">
+      <ul class="footer__contact">
         <li class="footer__el">
-            <p class="footer__link">©iLab 2024</p>
+          <p class="footer__link">©iLab 2024</p>
         </li>
         <li class="footer__el">
-            <small><a class="footer__link" target="_blank" href="https://dwt.heaj.be/">DWT</a></small>
+          <small
+            ><a class="footer__link" target="_blank" href="https://dwt.heaj.be/"
+              >DWT</a
+            ></small
+          >
         </li>
         <li class="footer__el">
-            <small><a class="footer__link" target="_blank" href="credits.html">Crédits</a></small>
+          <small
+            ><a class="footer__link" target="_blank" href="credits.html"
+              >Crédits</a
+            ></small
+          >
         </li>
-    </ul>
-<!-- 
+      </ul>
+      <!--
     <div class="footer__iconTop">
         <a href="#"><i class='bx bx-up-arrow-alt'></i></a>
     </div> -->
-</footer>
-
-
-  
-
-
-
-</body>
+    </footer>
+  </body>
 </html>
