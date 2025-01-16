@@ -93,8 +93,13 @@ if (siIndex) {
 
   elements.forEach((el, index) => {
     const fx = new TextScramble(el);
-    const phrases = phrasesList[index]; // Utilise les phrases dans la const
-
+  
+    // Vérifier que l'index est valide dans phrasesList
+    const phrases = phrasesList[index];
+    if (!phrases) {
+      return; // Sort de la boucle pour cet élément
+    }
+  
     let counter = 0;
     const next = () => {
       fx.setText(phrases[counter]).then(() => {
@@ -102,9 +107,10 @@ if (siIndex) {
       });
       counter = (counter + 1) % phrases.length;
     };
-
+  
     next();
   });
+  
 
   // face à face
 
