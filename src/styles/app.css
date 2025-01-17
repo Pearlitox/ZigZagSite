@@ -37,7 +37,6 @@ body {
   cursor: none;
   background-color: #DFC0AE;
   margin: 0;
-  scroll-snap-type: y mandatory;
   overflow-x: hidden;
 }
 .index h1 {
@@ -608,12 +607,6 @@ body::-webkit-scrollbar-thumb {
   }
 }
 @media screen and (min-width: 768px) {
-  html {
-    scroll-snap-type: y mandatory;
-  }
-  .scroll {
-    scroll-snap-align: start;
-  }
   h3 {
     font-size: 36px;
   }
