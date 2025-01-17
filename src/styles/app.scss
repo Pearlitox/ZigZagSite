@@ -97,6 +97,7 @@ body::-webkit-scrollbar-thumb {
 
 .header {
     height: 100vh;
+    max-width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -106,6 +107,7 @@ body::-webkit-scrollbar-thumb {
     background-image: url("../assets/images/bg-header.webp");
     position: relative;
     cursor: auto;
+    overflow-x: hidden;
 
     &__txt {
         padding: 15px;
@@ -212,6 +214,10 @@ body::-webkit-scrollbar-thumb {
         // background-image: url('../assets/images/brainCrop.png');
         width: 200px;
         background-size: cover;
+
+        &--2 {
+            display: none;
+        }
     }
     &__txt {
         padding-left: 15px;
@@ -313,6 +319,10 @@ body::-webkit-scrollbar-thumb {
         width: 300px;
         background-size: cover;
         z-index: 10;
+
+        &--2 {
+            display: none;
+        }
     }
     &__p {
         padding-left: 15px;
@@ -760,9 +770,21 @@ body::-webkit-scrollbar-thumb {
             }
         }
     }
+    .intro {
+        &__img {
+            &--2 {
+                display: block;
+            }
+        }
+    }
     .whatis {
         &__text {
             font-size: $h3-desktop;
+        }
+        &__img {
+            &--2 {
+                display: block;
+            }
         }
     }
     .pourquoi {

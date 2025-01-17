@@ -99,6 +99,7 @@ body::-webkit-scrollbar-thumb {
 
 .header {
   height: 100vh;
+  max-width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -107,6 +108,7 @@ body::-webkit-scrollbar-thumb {
   background-image: url("../assets/images/bg-header.webp");
   position: relative;
   cursor: auto;
+  overflow-x: hidden;
   /* Animation pour img--right */
 }
 .header__txt {
@@ -201,6 +203,9 @@ body::-webkit-scrollbar-thumb {
   width: 200px;
   background-size: cover;
 }
+.intro__img--2 {
+  display: none;
+}
 .intro__txt {
   padding-left: 15px;
   padding-right: 15px;
@@ -275,6 +280,9 @@ body::-webkit-scrollbar-thumb {
   width: 300px;
   background-size: cover;
   z-index: 10;
+}
+.whatis__img--2 {
+  display: none;
 }
 .whatis__p {
   padding-left: 15px;
@@ -625,8 +633,14 @@ body::-webkit-scrollbar-thumb {
   .header__txt h2 {
     font-size: 150px;
   }
+  .intro__img--2 {
+    display: block;
+  }
   .whatis__text {
     font-size: 36px;
+  }
+  .whatis__img--2 {
+    display: block;
   }
   .pourquoi__txt {
     font-size: 24px;
