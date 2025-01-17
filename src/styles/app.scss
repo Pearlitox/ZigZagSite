@@ -107,7 +107,7 @@ body::-webkit-scrollbar-thumb {
     background-image: url("../assets/images/bg-header.webp");
     position: relative;
     cursor: auto;
-    overflow-x: hidden;
+    overflow: hidden !important;
 
     &__txt {
         padding: 15px;
@@ -673,7 +673,7 @@ body::-webkit-scrollbar-thumb {
             margin: auto;
         }
         &__img {
-            width: 400px;
+            width: 200px;
         }
     }
 
@@ -797,14 +797,15 @@ body::-webkit-scrollbar-thumb {
         &__img {
             display: none;
             bottom: -320px;
-            width: 300px;
-
             display: block;
             position: absolute;
-            width: 300px;
+            width: 150px;
             top: -150px;
             right: 50%;
             transform: translateX(50%);
+        }
+        .intro__img {
+            width: 150px;
         }
     }
     .members {
@@ -916,7 +917,7 @@ body::-webkit-scrollbar-thumb {
         &__img {
             bottom: 200px;
             opacity: 1;
-            width: 500px;
+            width: 300px;
         }
         p {
             z-index: 10 !important;
@@ -941,6 +942,14 @@ body::-webkit-scrollbar-thumb {
 
         h1 {
             font-size: 300px;
+        }
+    }
+    .whatis__img {
+        width: 500px;
+    }
+    .pourquoi {
+        .intro__img {
+            width: 300px;
         }
     }
 }
