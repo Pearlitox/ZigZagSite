@@ -38,6 +38,7 @@ body {
   background-color: #DFC0AE;
   margin: 0;
   overflow-x: hidden;
+  max-width: 100vw;
 }
 .index h1 {
   font-family: zigzag;
@@ -213,7 +214,7 @@ body::-webkit-scrollbar-thumb {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  top: 20%;
+  top: 5%;
   width: 95%;
   padding-right: 15px;
   padding-left: 15px;
@@ -256,7 +257,7 @@ body::-webkit-scrollbar-thumb {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  top: 20%;
+  top: 10%;
   width: 100%;
 }
 .whatis__imgs {
