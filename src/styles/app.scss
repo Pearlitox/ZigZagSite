@@ -376,7 +376,7 @@ body::-webkit-scrollbar-thumb {
         padding: 40px 20px;
         transition: transform 0.3s ease;
         box-sizing: border-box;
-        max-width: 50ch;
+        max-width: 80ch;
         border: 10px solid $textBlack-color;
         background-color: $bg-color;
         // clip-path: polygon(0 10px,10px 10px,10px 0,calc(100% - 10px) 0,calc(100% - 10px) 10px,100% 10px,100% calc(100% - 10px),calc(100% - 10px) calc(100% - 10px),calc(100% - 10px) 100%,10px 100%,10px calc(100% - 10px),0 calc(100% - 10px));
@@ -388,6 +388,8 @@ body::-webkit-scrollbar-thumb {
     margin-top: 10rem;
 
     &__container {
+        margin: auto;
+        max-width: 50%;
         display: flex;
         justify-content: center;
         gap: 2rem;
@@ -900,6 +902,9 @@ body::-webkit-scrollbar-thumb {
         &__title {
             text-align: center;
             margin: auto;
+        }
+        .header__title {
+            font-size: $h3-desktop;
         }
     }
     .intro {

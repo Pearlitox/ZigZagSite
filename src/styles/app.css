@@ -329,7 +329,7 @@ body::-webkit-scrollbar-thumb {
   padding: 40px 20px;
   transition: transform 0.3s ease;
   box-sizing: border-box;
-  max-width: 50ch;
+  max-width: 80ch;
   border: 10px solid #542B0E;
   background-color: #DFC0AE;
 }
@@ -339,6 +339,8 @@ body::-webkit-scrollbar-thumb {
   margin-top: 10rem;
 }
 .members__container {
+  margin: auto;
+  max-width: 50%;
   display: flex;
   justify-content: center;
   gap: 2rem;
@@ -722,6 +724,9 @@ body::-webkit-scrollbar-thumb {
   .header__title {
     text-align: center;
     margin: auto;
+  }
+  .header .header__title {
+    font-size: 36px;
   }
   .intro__img {
     width: 500px;
