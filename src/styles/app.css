@@ -339,8 +339,6 @@ body::-webkit-scrollbar-thumb {
   margin-top: 10rem;
 }
 .members__container {
-  margin: auto;
-  max-width: 50%;
   display: flex;
   justify-content: center;
   gap: 2rem;
@@ -765,5 +763,9 @@ body::-webkit-scrollbar-thumb {
   }
   .pourquoi .intro__img {
     width: 300px;
+  }
+  .members__container {
+    margin: auto;
+    max-width: 50%;
   }
 }/*# sourceMappingURL=app.css.map */

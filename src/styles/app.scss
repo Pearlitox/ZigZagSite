@@ -390,8 +390,8 @@ body::-webkit-scrollbar-thumb {
     margin-top: 10rem;
 
     &__container {
-        margin: auto;
-        max-width: 50%;
+        // margin: auto;
+        // max-width: 50%;
         display: flex;
         justify-content: center;
         gap: 2rem;
@@ -957,6 +957,12 @@ body::-webkit-scrollbar-thumb {
     .pourquoi {
         .intro__img {
             width: 300px;
+        }
+    }
+    .members {
+        &__container {
+            margin: auto;
+            max-width: 50%;
         }
     }
 }
