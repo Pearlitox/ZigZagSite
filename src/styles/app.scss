@@ -117,12 +117,13 @@ body::-webkit-scrollbar-thumb {
             font-size: $h3-mobile;
             font-family: "Pixelify Sans", sans-serif;
             color: $textWhite-color;
-            -webkit-text-stroke: 1px #3351e3;
+            //-webkit-text-stroke: 1px $blue-color;
+            text-shadow: 0px 0px 7px $blue-color;
             // max-width: 40ch;
         }
     }
     h1 {
-        text-shadow: 0px 7px 0px #3351e3;
+        text-shadow: 0px 7px 0px $blue-color;
         color: $textWhite-color;
         font-size: $h1-mobile;
     }
